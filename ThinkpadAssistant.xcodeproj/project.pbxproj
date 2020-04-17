@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
+		FC56DEC01EE98AC7001ACE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBF1EE98AC7001ACE3F /* ViewController.swift */; };
+		FC56DEC21EE98AC7001ACE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */; };
+		FC56DEC51EE98AC7001ACE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC31EE98AC7001ACE3F /* Main.storyboard */; };
+		FC56DED31EE98B3A001ACE3F /* HelperAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DED21EE98B3A001ACE3F /* HelperAppDelegate.swift */; };
+		FC56DED71EE98B3A001ACE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC56DED61EE98B3A001ACE3F /* Assets.xcassets */; };
+		FC56DEDA1EE98B3A001ACE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC56DED81EE98B3A001ACE3F /* Main.storyboard */; };
+		FC56DEE01EE9A826001ACE3F /* AutoLaunchHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC56DED01EE98B3A001ACE3F /* AutoLaunchHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC56DEDF1EE9A7F5001ACE3F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				FC56DEE01EE9A826001ACE3F /* AutoLaunchHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
+		FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkpadAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC56DEBF1EE98AC7001ACE3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC56DEC41EE98AC7001ACE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC56DEC61EE98AC7001ACE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC56DED01EE98B3A001ACE3F /* AutoLaunchHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLaunchHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC56DED21EE98B3A001ACE3F /* HelperAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAppDelegate.swift; sourceTree = "<group>"; };
+		FC56DED61EE98B3A001ACE3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC56DED91EE98B3A001ACE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC56DEDB1EE98B3A001ACE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC56DEE11EE9B819001ACE3F /* ThinkpadAssistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThinkpadAssistant.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC56DEB71EE98AC7001ACE3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC56DECD1EE98B3A001ACE3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC56DEB11EE98AC7001ACE3F = {
+			isa = PBXGroup;
+			children = (
+				FC56DEBC1EE98AC7001ACE3F /* ThinkpadAssistant */,
+				FC56DED11EE98B3A001ACE3F /* AutoLaunchHelper */,
+				FC56DEBB1EE98AC7001ACE3F /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		FC56DEBB1EE98AC7001ACE3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */,
+				FC56DED01EE98B3A001ACE3F /* AutoLaunchHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC56DEBC1EE98AC7001ACE3F /* ThinkpadAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				FC56DEE11EE9B819001ACE3F /* ThinkpadAssistant.entitlements */,
+				FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */,
+				FC56DEBF1EE98AC7001ACE3F /* ViewController.swift */,
+				FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */,
+				FC56DEC31EE98AC7001ACE3F /* Main.storyboard */,
+				FC56DEC61EE98AC7001ACE3F /* Info.plist */,
+			);
+			path = ThinkpadAssistant;
+			sourceTree = "<group>";
+		};
+		FC56DED11EE98B3A001ACE3F /* AutoLaunchHelper */ = {
+			isa = PBXGroup;
+			children = (
+				FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */,
+				FC56DED21EE98B3A001ACE3F /* HelperAppDelegate.swift */,
+				FC56DED61EE98B3A001ACE3F /* Assets.xcassets */,
+				FC56DED81EE98B3A001ACE3F /* Main.storyboard */,
+				FC56DEDB1EE98B3A001ACE3F /* Info.plist */,
+			);
+			path = AutoLaunchHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC56DEB91EE98AC7001ACE3F /* ThinkpadAssistant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC56DEC91EE98AC7001ACE3F /* Build configuration list for PBXNativeTarget "ThinkpadAssistant" */;
+			buildPhases = (
+				FC56DEB61EE98AC7001ACE3F /* Sources */,
+				FC56DEB71EE98AC7001ACE3F /* Frameworks */,
+				FC56DEB81EE98AC7001ACE3F /* Resources */,
+				FC56DEDF1EE9A7F5001ACE3F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThinkpadAssistant;
+			productName = ThinkpadAssistant;
+			productReference = FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC56DECF1EE98B3A001ACE3F /* AutoLaunchHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC56DEDC1EE98B3A001ACE3F /* Build configuration list for PBXNativeTarget "AutoLaunchHelper" */;
+			buildPhases = (
+				FC56DECC1EE98B3A001ACE3F /* Sources */,
+				FC56DECD1EE98B3A001ACE3F /* Frameworks */,
+				FC56DECE1EE98B3A001ACE3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLaunchHelper;
+			productName = AutoLaunchHelper;
+			productReference = FC56DED01EE98B3A001ACE3F /* AutoLaunchHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC56DEB21EE98AC7001ACE3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Matthäus Szturc";
+				TargetAttributes = {
+					FC56DEB91EE98AC7001ACE3F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2Y3274NQLX;
+						LastSwiftMigration = 1140;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					FC56DECF1EE98B3A001ACE3F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2Y3274NQLX;
+						LastSwiftMigration = 1140;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = FC56DEB51EE98AC7001ACE3F /* Build configuration list for PBXProject "ThinkpadAssistant" */;
+			compatibilityVersion = "Xcode 11.4";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC56DEB11EE98AC7001ACE3F;
+			productRefGroup = FC56DEBB1EE98AC7001ACE3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC56DEB91EE98AC7001ACE3F /* ThinkpadAssistant */,
+				FC56DECF1EE98B3A001ACE3F /* AutoLaunchHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC56DEB81EE98AC7001ACE3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC56DEC21EE98AC7001ACE3F /* Assets.xcassets in Resources */,
+				FC56DEC51EE98AC7001ACE3F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC56DECE1EE98B3A001ACE3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC56DED71EE98B3A001ACE3F /* Assets.xcassets in Resources */,
+				FC56DEDA1EE98B3A001ACE3F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC56DEB61EE98AC7001ACE3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC56DEC01EE98AC7001ACE3F /* ViewController.swift in Sources */,
+				FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC56DECC1EE98B3A001ACE3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC56DED31EE98B3A001ACE3F /* HelperAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FC56DEC31EE98AC7001ACE3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC56DEC41EE98AC7001ACE3F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC56DED81EE98B3A001ACE3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC56DED91EE98B3A001ACE3F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC56DEC71EE98AC7001ACE3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC56DEC81EE98AC7001ACE3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FC56DECA1EE98AC7001ACE3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ThinkpadAssistant/ThinkpadAssistant.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Y3274NQLX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ThinkpadAssistant/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.ThinkpadAssistant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FC56DECB1EE98AC7001ACE3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ThinkpadAssistant/ThinkpadAssistant.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Y3274NQLX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ThinkpadAssistant/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.ThinkpadAssistant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FC56DEDD1EE98B3A001ACE3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AutoLaunchHelper/AutoLaunchHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2Y3274NQLX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = AutoLaunchHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.AutoLaunchHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FC56DEDE1EE98B3A001ACE3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AutoLaunchHelper/AutoLaunchHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2Y3274NQLX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = AutoLaunchHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.AutoLaunchHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC56DEB51EE98AC7001ACE3F /* Build configuration list for PBXProject "ThinkpadAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC56DEC71EE98AC7001ACE3F /* Debug */,
+				FC56DEC81EE98AC7001ACE3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC56DEC91EE98AC7001ACE3F /* Build configuration list for PBXNativeTarget "ThinkpadAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC56DECA1EE98AC7001ACE3F /* Debug */,
+				FC56DECB1EE98AC7001ACE3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC56DEDC1EE98B3A001ACE3F /* Build configuration list for PBXNativeTarget "AutoLaunchHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC56DEDD1EE98B3A001ACE3F /* Debug */,
+				FC56DEDE1EE98B3A001ACE3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC56DEB21EE98AC7001ACE3F /* Project object */;
+}
