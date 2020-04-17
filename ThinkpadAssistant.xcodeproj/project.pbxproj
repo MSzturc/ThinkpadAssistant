@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11944516D526E431C5363233 /* Pods_AutoLaunchHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D3B813365BCE6A84908549 /* Pods_AutoLaunchHelper.framework */; };
+		C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8424244A077000ECFFBD /* ShortcutManager.swift */; };
 		DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */; };
 		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
 		FC56DEC01EE98AC7001ACE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBF1EE98AC7001ACE3F /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		A7FFA5A32A931C74AFABA743 /* Pods-AutoLaunchHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLaunchHelper.release.xcconfig"; path = "Target Support Files/Pods-AutoLaunchHelper/Pods-AutoLaunchHelper.release.xcconfig"; sourceTree = "<group>"; };
 		AE92EEF7DF0DF77FC8C1D8CC /* Pods-ThinkpadAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.release.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		C2D3B813365BCE6A84908549 /* Pods_AutoLaunchHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoLaunchHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93B8424244A077000ECFFBD /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
 		DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.debug.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
 		FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkpadAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +93,6 @@
 				DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */,
 				AE92EEF7DF0DF77FC8C1D8CC /* Pods-ThinkpadAssistant.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -125,6 +126,7 @@
 				FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */,
 				FC56DEC31EE98AC7001ACE3F /* Main.storyboard */,
 				FC56DEC61EE98AC7001ACE3F /* Info.plist */,
+				C93B8424244A077000ECFFBD /* ShortcutManager.swift */,
 			);
 			path = ThinkpadAssistant;
 			sourceTree = "<group>";
@@ -326,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC56DEC01EE98AC7001ACE3F /* ViewController.swift in Sources */,
+				C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */,
 				FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
