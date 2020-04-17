@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11944516D526E431C5363233 /* Pods_AutoLaunchHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D3B813365BCE6A84908549 /* Pods_AutoLaunchHelper.framework */; };
+		DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */; };
 		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
 		FC56DEC01EE98AC7001ACE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBF1EE98AC7001ACE3F /* ViewController.swift */; };
 		FC56DEC21EE98AC7001ACE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */; };
@@ -31,6 +33,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F4D64855DFDE6D7D5FD9F23 /* Pods-AutoLaunchHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLaunchHelper.debug.xcconfig"; path = "Target Support Files/Pods-AutoLaunchHelper/Pods-AutoLaunchHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThinkpadAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FFA5A32A931C74AFABA743 /* Pods-AutoLaunchHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLaunchHelper.release.xcconfig"; path = "Target Support Files/Pods-AutoLaunchHelper/Pods-AutoLaunchHelper.release.xcconfig"; sourceTree = "<group>"; };
+		AE92EEF7DF0DF77FC8C1D8CC /* Pods-ThinkpadAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.release.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.release.xcconfig"; sourceTree = "<group>"; };
+		C2D3B813365BCE6A84908549 /* Pods_AutoLaunchHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoLaunchHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.debug.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
 		FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkpadAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,18 +67,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11944516D526E431C5363233 /* Pods_AutoLaunchHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115363A5D0E7B98AE00FDE4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2D3B813365BCE6A84908549 /* Pods_AutoLaunchHelper.framework */,
+				A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		926AC987C488408C1F64878E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F4D64855DFDE6D7D5FD9F23 /* Pods-AutoLaunchHelper.debug.xcconfig */,
+				A7FFA5A32A931C74AFABA743 /* Pods-AutoLaunchHelper.release.xcconfig */,
+				DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */,
+				AE92EEF7DF0DF77FC8C1D8CC /* Pods-ThinkpadAssistant.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FC56DEB11EE98AC7001ACE3F = {
 			isa = PBXGroup;
 			children = (
 				FC56DEBC1EE98AC7001ACE3F /* ThinkpadAssistant */,
 				FC56DED11EE98B3A001ACE3F /* AutoLaunchHelper */,
 				FC56DEBB1EE98AC7001ACE3F /* Products */,
+				926AC987C488408C1F64878E /* Pods */,
+				115363A5D0E7B98AE00FDE4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -115,10 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC56DEC91EE98AC7001ACE3F /* Build configuration list for PBXNativeTarget "ThinkpadAssistant" */;
 			buildPhases = (
+				28AFDD65393BBAAD200C6983 /* [CP] Check Pods Manifest.lock */,
 				FC56DEB61EE98AC7001ACE3F /* Sources */,
 				FC56DEB71EE98AC7001ACE3F /* Frameworks */,
 				FC56DEB81EE98AC7001ACE3F /* Resources */,
 				FC56DEDF1EE9A7F5001ACE3F /* CopyFiles */,
+				B66E9B1E7E52E507166B4862 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC56DEDC1EE98B3A001ACE3F /* Build configuration list for PBXNativeTarget "AutoLaunchHelper" */;
 			buildPhases = (
+				1AA0EDBC2855B29169615578 /* [CP] Check Pods Manifest.lock */,
 				FC56DECC1EE98B3A001ACE3F /* Sources */,
 				FC56DECD1EE98B3A001ACE3F /* Frameworks */,
 				FC56DECE1EE98B3A001ACE3F /* Resources */,
@@ -219,6 +255,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AA0EDBC2855B29169615578 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoLaunchHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28AFDD65393BBAAD200C6983 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThinkpadAssistant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B66E9B1E7E52E507166B4862 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC56DEB61EE98AC7001ACE3F /* Sources */ = {
@@ -373,6 +473,7 @@
 		};
 		FC56DECA1EE98AC7001ACE3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ThinkpadAssistant/ThinkpadAssistant.entitlements;
@@ -397,6 +498,7 @@
 		};
 		FC56DECB1EE98AC7001ACE3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE92EEF7DF0DF77FC8C1D8CC /* Pods-ThinkpadAssistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ThinkpadAssistant/ThinkpadAssistant.entitlements;
@@ -421,6 +523,7 @@
 		};
 		FC56DEDD1EE98B3A001ACE3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4D64855DFDE6D7D5FD9F23 /* Pods-AutoLaunchHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AutoLaunchHelper/AutoLaunchHelper.entitlements;
@@ -444,6 +547,7 @@
 		};
 		FC56DEDE1EE98B3A001ACE3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7FFA5A32A931C74AFABA743 /* Pods-AutoLaunchHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AutoLaunchHelper/AutoLaunchHelper.entitlements;
