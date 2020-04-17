@@ -12,16 +12,23 @@ import MASShortcut
 struct ShortcutManager {
     
     static let systemPrefsShortcut = MASShortcut(keyCode: kVK_F18, modifierFlags: [])
+    static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
     
     static func register() {
         MASShortcutMonitor.shared()?.register(systemPrefsShortcut, withAction: {
             startApp(withBundleIdentifier: "com.apple.systempreferences")
             })
+        
+        MASShortcutMonitor.shared()?.register(launchpadShortcut, withAction: {
+            startApp(withBundleIdentifier: "com.apple.launchpad.launcher")
+        })
+        
+        
     }
     
     static func unregister() {
         MASShortcutMonitor.shared().unregisterShortcut(systemPrefsShortcut)
-    } 
+    }
     
     private static func startApp(withBundleIdentifier: String){
         
