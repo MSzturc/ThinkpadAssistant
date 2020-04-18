@@ -11,7 +11,7 @@
 		C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8424244A077000ECFFBD /* ShortcutManager.swift */; };
 		DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */; };
 		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
-		FC56DEC01EE98AC7001ACE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBF1EE98AC7001ACE3F /* ViewController.swift */; };
+		FC56DEC01EE98AC7001ACE3F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBF1EE98AC7001ACE3F /* SettingsViewController.swift */; };
 		FC56DEC21EE98AC7001ACE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */; };
 		FC56DEC51EE98AC7001ACE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC31EE98AC7001ACE3F /* Main.storyboard */; };
 		FC56DED31EE98B3A001ACE3F /* HelperAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DED21EE98B3A001ACE3F /* HelperAppDelegate.swift */; };
@@ -44,7 +44,7 @@
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
 		FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkpadAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC56DEBF1EE98AC7001ACE3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC56DEBF1EE98AC7001ACE3F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC56DEC41EE98AC7001ACE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC56DEC61EE98AC7001ACE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			children = (
 				FC56DEE11EE9B819001ACE3F /* ThinkpadAssistant.entitlements */,
 				FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */,
-				FC56DEBF1EE98AC7001ACE3F /* ViewController.swift */,
+				FC56DEBF1EE98AC7001ACE3F /* SettingsViewController.swift */,
 				FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */,
 				FC56DEC31EE98AC7001ACE3F /* Main.storyboard */,
 				FC56DEC61EE98AC7001ACE3F /* Info.plist */,
@@ -327,7 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC56DEC01EE98AC7001ACE3F /* ViewController.swift in Sources */,
+				FC56DEC01EE98AC7001ACE3F /* SettingsViewController.swift in Sources */,
 				C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */,
 				FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */,
 			);
