@@ -15,6 +15,22 @@ class ShortcutManager {
     static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
     static let micMuteShortcut = MASShortcut(keyCode: kVK_F20, modifierFlags: [])
     
+    private static var muteIcon:NSImage = {
+        let image = NSImage(named: "NSTouchBarAudioInputMuteTemplate")
+        let resized = image!.resizeWhileMaintainingAspectRatioToSize(size: NSSize(width: 76.0, height: 120.0))
+        let cropped = resized!.crop(size: NSSize(width: 85.0, height: 130.0))
+        cropped?.isTemplate = true
+        return cropped!
+    }()
+    
+    private static var unmuteIcon:NSImage = {
+        let image = NSImage(named: "NSTouchBarAudioInputTemplate")
+        let resized = image!.resizeWhileMaintainingAspectRatioToSize(size: NSSize(width: 36.0, height: 120.0))
+        let cropped = resized!.crop(size: NSSize(width: 40.3, height: 130.0))
+        cropped?.isTemplate = true
+        return cropped!
+    }()
+    
     class func register() {
         MASShortcutMonitor.shared()?.register(systemPrefsShortcut, withAction: {
             startApp(withBundleIdentifier: "com.apple.systempreferences")
@@ -25,17 +41,19 @@ class ShortcutManager {
         })
         
         MASShortcutMonitor.shared()?.register(micMuteShortcut, withAction: {
-            
-            let image = NSImage(named: "NSTouchBarAudioInputMuteTemplate")
-            let resized = image!.resizeWhileMaintainingAspectRatioToSize(size: NSSize(width: 76.0, height: 120.0))
-            let cropped = resized!.crop(size: NSSize(width: 85.0, height: 130.0))
-            cropped?.isTemplate = true
-            
-            HUD.showImage(cropped!, status: "Microphone muted")
-            
+            if(MuteMicManager.shared.isMuted() == true){
+                HUD.showImage(unmuteIcon, status: "Microphone              \nunmuted")
+                MuteMicManager.shared.toogleMute()
+                
+            } else {
+                HUD.showImage(muteIcon, status: "Microphone              \nmuted")
+                MuteMicManager.shared.toogleMute()
+                
+            }
         })
         
     }
+    
     
     class func unregister() {
         MASShortcutMonitor.shared().unregisterShortcut(systemPrefsShortcut)

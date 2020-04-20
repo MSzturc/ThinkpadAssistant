@@ -11,6 +11,8 @@
 		C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8424244A077000ECFFBD /* ShortcutManager.swift */; };
 		C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8457244DAA4500ECFFBD /* HUD.swift */; };
 		C93B845E244DD49C00ECFFBD /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B845D244DD49C00ECFFBD /* NSImageExtensions.swift */; };
+		C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */; };
+		C93B8463244E0F5600ECFFBD /* Optional+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8462244E0F5600ECFFBD /* Optional+Assert.swift */; };
 		DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */; };
 		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
 		FC56DEC01EE98AC7001ACE3F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBF1EE98AC7001ACE3F /* SettingsViewController.swift */; };
@@ -44,6 +46,8 @@
 		C93B8424244A077000ECFFBD /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
 		C93B8457244DAA4500ECFFBD /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		C93B845D244DD49C00ECFFBD /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
+		C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteMicManager.swift; sourceTree = "<group>"; };
+		C93B8462244E0F5600ECFFBD /* Optional+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Assert.swift"; sourceTree = "<group>"; };
 		DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.debug.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
 		FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkpadAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +137,8 @@
 				FC56DEC61EE98AC7001ACE3F /* Info.plist */,
 				C93B8424244A077000ECFFBD /* ShortcutManager.swift */,
 				C93B845D244DD49C00ECFFBD /* NSImageExtensions.swift */,
+				C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */,
+				C93B8462244E0F5600ECFFBD /* Optional+Assert.swift */,
 			);
 			path = ThinkpadAssistant;
 			sourceTree = "<group>";
@@ -337,7 +343,9 @@
 				C93B845E244DD49C00ECFFBD /* NSImageExtensions.swift in Sources */,
 				C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */,
 				C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */,
+				C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */,
 				FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */,
+				C93B8463244E0F5600ECFFBD /* Optional+Assert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
