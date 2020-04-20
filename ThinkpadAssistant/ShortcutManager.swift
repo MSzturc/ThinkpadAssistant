@@ -13,6 +13,7 @@ struct ShortcutManager {
     
     static let systemPrefsShortcut = MASShortcut(keyCode: kVK_F18, modifierFlags: [])
     static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
+    static let micMuteShortcut = MASShortcut(keyCode: kVK_F20, modifierFlags: [])
     
     static func register() {
         MASShortcutMonitor.shared()?.register(systemPrefsShortcut, withAction: {
@@ -23,6 +24,16 @@ struct ShortcutManager {
             startApp(withBundleIdentifier: "com.apple.launchpad.launcher")
         })
         
+        MASShortcutMonitor.shared()?.register(micMuteShortcut, withAction: {
+            
+            let image = NSImage(named: "NSTouchBarAudioInputMuteTemplate")
+            let resized = image!.resizeWhileMaintainingAspectRatioToSize(size: NSSize(width: 76.0, height: 120.0))
+            let cropped = resized!.crop(size: NSSize(width: 85.0, height: 130.0))
+            cropped?.isTemplate = true
+            
+            HUD.showImage(cropped!, status: "Microphone muted")
+            
+        })
         
     }
     

@@ -23,7 +23,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         ShortcutManager.unregister()
-        // Insert code here to tear down your application
     }
     
     func setupMenuBar() {

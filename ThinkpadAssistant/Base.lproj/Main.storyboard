@@ -705,7 +705,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="preferencesID" id="XfG-lQ-9wD" customClass="SettingsViewController" customModule="ThinkpadAssistant" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                    <view key="view" identifier="settingsView" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -727,6 +727,7 @@
                     </view>
                     <connections>
                         <outlet property="autoLaunchCheckbox" destination="HqW-zv-za9" id="Nrz-eL-tqP"/>
+                        <outlet property="settingsView" destination="m2S-Jp-Qdl" id="7hI-id-2aH"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,8 @@ class SettingsViewController: NSViewController {
 
     @IBOutlet weak var autoLaunchCheckbox: NSButton!
     
+    @IBOutlet var micView: NSView!
+    
     @IBAction func toggleAutoLaunch(_ sender: NSButton) {
         let isAuto = sender.state == .on
         SMLoginItemSetEnabled(helperBundleName as CFString, isAuto)
@@ -21,7 +23,7 @@ class SettingsViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let foundHelper = NSWorkspace.shared.runningApplications.contains {
             $0.bundleIdentifier == helperBundleName
         }
