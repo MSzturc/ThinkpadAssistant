@@ -131,6 +131,8 @@ class HUD: NSView {
         if isHidden {
             frame = view.frame
             view.addSubview(self)
+        } else {
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
         }
         setupProgressIndicator(view: imageView)
         setStatus(status)
