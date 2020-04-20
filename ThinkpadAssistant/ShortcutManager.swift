@@ -11,6 +11,7 @@ import MASShortcut
 
 class ShortcutManager {
     
+    static let mirroringMonitorShortcut = MASShortcut(keyCode: kVK_F16, modifierFlags: [])
     static let disableWlanShortcut = MASShortcut(keyCode: kVK_F17, modifierFlags: [])
     static let systemPrefsShortcut = MASShortcut(keyCode: kVK_F18, modifierFlags: [])
     static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
@@ -42,6 +43,18 @@ class ShortcutManager {
         let wlanIcon = NSImage(named: NSImage.Name("wlanOff"))
         wlanIcon?.isTemplate = true
         return wlanIcon!
+    }()
+    
+    private static var screenMirroringIcon:NSImage = {
+        let mirroringIcon = NSImage(named: NSImage.Name("mirroring"))
+        mirroringIcon?.isTemplate = true
+        return mirroringIcon!
+    }()
+    
+    private static var screenExtendingIcon:NSImage = {
+        let mirroringIcon = NSImage(named: NSImage.Name("extending"))
+        mirroringIcon?.isTemplate = true
+        return mirroringIcon!
     }()
 
     class func register() {
@@ -75,6 +88,19 @@ class ShortcutManager {
                 HUD.showImage(wlanOnIcon, status: "Wi-Fi                        \nenabled")
                 WifiManager.shared.toggleMasterSwitch(status: true)
                 
+            }
+        })
+        
+        MASShortcutMonitor.shared()?.register(mirroringMonitorShortcut, withAction: {
+            if(DisplayManager.getDisplayCount() > 1){
+                if(DisplayManager.isDisplayedMirrored() == true){
+                    HUD.showImage(screenExtendingIcon, status: "Screen                        \nextending")
+                    DisplayManager.toggleMirroring()
+                    
+                } else {
+                    HUD.showImage(screenMirroringIcon, status: "Screen                        \nmirroring")
+                    DisplayManager.toggleMirroring()
+                }
             }
         })
         

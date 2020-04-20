@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -656,15 +655,16 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ThinkpadAssistant" customModuleProvider="target">
                     <connections>
+                        <outlet property="launchAtLoginMenuItem" destination="Lcb-4h-zk2" id="UmP-X8-dov"/>
                         <outlet property="statusBarMenu" destination="XrB-HN-vRU" id="O8s-cs-J3B"/>
                     </connections>
                 </customObject>
                 <menu identifier="statusBarMenu" id="XrB-HN-vRU">
                     <items>
-                        <menuItem title="Preferences..." id="Lcb-4h-zk2">
+                        <menuItem title="Launch on Login" id="Lcb-4h-zk2">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <segue destination="B8D-0N-5wS" kind="modal" id="pld-m5-XlQ"/>
+                                <action selector="launchAtLoginPressed:" target="Voe-Tx-rLC" id="rZ8-bj-ecl"/>
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="XBZ-ot-4Th"/>
@@ -679,60 +679,6 @@
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="84" y="-133"/>
-        </scene>
-        <!--Window Controller-->
-        <scene sceneID="R2V-B0-nI4">
-            <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" identifier="preferencesWindow" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingIdentifier="preferencesWindowController" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="sci-Cf-wOd"/>
-                        </connections>
-                    </window>
-                    <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
-                    </connections>
-                </windowController>
-                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="75" y="250"/>
-        </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="hIz-AP-VOD">
-            <objects>
-                <viewController storyboardIdentifier="preferencesID" id="XfG-lQ-9wD" customClass="SettingsViewController" customModule="ThinkpadAssistant" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" identifier="settingsView" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="HqW-zv-za9">
-                                <rect key="frame" x="191" y="126" width="98" height="18"/>
-                                <buttonCell key="cell" type="check" title="Auto Launch" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="YYU-yu-cYF">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleAutoLaunch:" target="XfG-lQ-9wD" id="cPR-QW-Fb0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="HqW-zv-za9" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="COm-8w-poY"/>
-                            <constraint firstItem="HqW-zv-za9" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="yoC-gC-7DE"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="autoLaunchCheckbox" destination="HqW-zv-za9" id="Nrz-eL-tqP"/>
-                        <outlet property="settingsView" destination="m2S-Jp-Qdl" id="7hI-id-2aH"/>
-                    </connections>
-                </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
 </document>
