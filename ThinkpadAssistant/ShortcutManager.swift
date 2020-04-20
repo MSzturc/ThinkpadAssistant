@@ -11,6 +11,7 @@ import MASShortcut
 
 class ShortcutManager {
     
+    static let disableWlanShortcut = MASShortcut(keyCode: kVK_F17, modifierFlags: [])
     static let systemPrefsShortcut = MASShortcut(keyCode: kVK_F18, modifierFlags: [])
     static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
     static let micMuteShortcut = MASShortcut(keyCode: kVK_F20, modifierFlags: [])
@@ -31,6 +32,18 @@ class ShortcutManager {
         return cropped!
     }()
     
+    private static var wlanOnIcon:NSImage = {
+        let wlanIcon = NSImage(named: NSImage.Name("wlanOn"))
+        wlanIcon?.isTemplate = true
+        return wlanIcon!
+    }()
+    
+    private static var wlanOffIcon:NSImage = {
+        let wlanIcon = NSImage(named: NSImage.Name("wlanOff"))
+        wlanIcon?.isTemplate = true
+        return wlanIcon!
+    }()
+
     class func register() {
         MASShortcutMonitor.shared()?.register(systemPrefsShortcut, withAction: {
             startApp(withBundleIdentifier: "com.apple.systempreferences")
@@ -48,6 +61,19 @@ class ShortcutManager {
             } else {
                 HUD.showImage(muteIcon, status: "Microphone              \nmuted")
                 MuteMicManager.shared.toogleMute()
+                
+            }
+        })
+        
+        MASShortcutMonitor.shared()?.register(disableWlanShortcut, withAction: {
+            if(WifiManager.shared.isPowered == true){
+                HUD.showImage(wlanOffIcon, status: "Wi-Fi                        \ndisabled")
+                MuteMicManager.shared.toogleMute()
+                WifiManager.shared.toggleMasterSwitch(status: false)
+                
+            } else {
+                HUD.showImage(wlanOnIcon, status: "Wi-Fi                        \nenabled")
+                WifiManager.shared.toggleMasterSwitch(status: true)
                 
             }
         })
