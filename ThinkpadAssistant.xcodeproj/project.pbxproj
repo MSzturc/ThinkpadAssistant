@@ -16,6 +16,7 @@
 		C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */; };
 		C93B8463244E0F5600ECFFBD /* Optional+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8462244E0F5600ECFFBD /* Optional+Assert.swift */; };
 		C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8466244E20D500ECFFBD /* WifiManager.swift */; };
+		C9DFD0232450C9F6000103A2 /* NSViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFD0222450C9F6000103A2 /* NSViewExtension.swift */; };
 		DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */; };
 		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
 		FC56DEC21EE98AC7001ACE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteMicManager.swift; sourceTree = "<group>"; };
 		C93B8462244E0F5600ECFFBD /* Optional+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Assert.swift"; sourceTree = "<group>"; };
 		C93B8466244E20D500ECFFBD /* WifiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiManager.swift; sourceTree = "<group>"; };
+		C9DFD0222450C9F6000103A2 /* NSViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewExtension.swift; sourceTree = "<group>"; };
 		DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.debug.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
 		FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkpadAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				C93B8466244E20D500ECFFBD /* WifiManager.swift */,
 				C91E2344244E3780007A1962 /* DisplayManager.swift */,
 				C91E2346244E37D3007A1962 /* CGError+Assert.swift */,
+				C9DFD0222450C9F6000103A2 /* NSViewExtension.swift */,
 			);
 			path = ThinkpadAssistant;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */,
 				FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */,
 				C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */,
+				C9DFD0232450C9F6000103A2 /* NSViewExtension.swift in Sources */,
 				C91E2347244E37D3007A1962 /* CGError+Assert.swift in Sources */,
 				C93B8463244E0F5600ECFFBD /* Optional+Assert.swift in Sources */,
 			);
