@@ -1,16 +1,20 @@
 PODS:
+  - Defaults (4.0.0)
   - MASShortcut (2.4.0)
 
 DEPENDENCIES:
+  - Defaults
   - MASShortcut
 
 SPEC REPOS:
   trunk:
+    - Defaults
     - MASShortcut
 
 SPEC CHECKSUMS:
+  Defaults: bd35cdccb03e81e8ec158dea6518b94c321de403
   MASShortcut: d9e4909e878661cc42877cc9d6efbe638273ab57
 
-PODFILE CHECKSUM: 49bbedece184dded1cc05cf325e134e316c34805
+PODFILE CHECKSUM: b74122c2816abef8085e0f61ee2fe5e7e1df3f99
 
 COCOAPODS: 1.9.1
