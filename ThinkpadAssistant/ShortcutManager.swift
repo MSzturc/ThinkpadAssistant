@@ -9,13 +9,13 @@
 import Foundation
 import MASShortcut
 
-struct ShortcutManager {
+class ShortcutManager {
     
     static let systemPrefsShortcut = MASShortcut(keyCode: kVK_F18, modifierFlags: [])
     static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
     static let micMuteShortcut = MASShortcut(keyCode: kVK_F20, modifierFlags: [])
     
-    static func register() {
+    class func register() {
         MASShortcutMonitor.shared()?.register(systemPrefsShortcut, withAction: {
             startApp(withBundleIdentifier: "com.apple.systempreferences")
             })
@@ -37,11 +37,11 @@ struct ShortcutManager {
         
     }
     
-    static func unregister() {
+    class func unregister() {
         MASShortcutMonitor.shared().unregisterShortcut(systemPrefsShortcut)
     }
     
-    private static func startApp(withBundleIdentifier: String){
+    class func startApp(withBundleIdentifier: String){
         
         let focusedApp = NSWorkspace.shared.frontmostApplication?.bundleIdentifier
         

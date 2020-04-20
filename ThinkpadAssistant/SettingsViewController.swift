@@ -14,8 +14,6 @@ class SettingsViewController: NSViewController {
 
     @IBOutlet weak var autoLaunchCheckbox: NSButton!
     
-    @IBOutlet var micView: NSView!
-    
     @IBAction func toggleAutoLaunch(_ sender: NSButton) {
         let isAuto = sender.state == .on
         SMLoginItemSetEnabled(helperBundleName as CFString, isAuto)
