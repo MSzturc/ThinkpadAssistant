@@ -11,21 +11,20 @@ import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     
     let helperBundleName = "de.mszturc.AutoLaunchHelper"
-
+    
     @IBOutlet weak var statusBarMenu: NSMenu!
     
     @IBOutlet weak var launchAtLoginMenuItem: NSMenuItem!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupMenuBar()
-        //Register global Hotkeys
         ShortcutManager.register()
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         ShortcutManager.unregister()
     }
