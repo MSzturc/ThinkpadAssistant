@@ -17,45 +17,7 @@ class ShortcutManager {
     static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
     static let micMuteShortcut = MASShortcut(keyCode: kVK_F20, modifierFlags: [])
     
-    private static var muteIcon:NSImage = {
-        let image = NSImage(named: "NSTouchBarAudioInputMuteTemplate")
-        let resized = image!.resizeWhileMaintainingAspectRatioToSize(size: NSSize(width: 76.0, height: 120.0))
-        let cropped = resized!.crop(size: NSSize(width: 85.0, height: 130.0))
-        cropped?.isTemplate = true
-        return cropped!
-    }()
     
-    private static var unmuteIcon:NSImage = {
-        let image = NSImage(named: "NSTouchBarAudioInputTemplate")
-        let resized = image!.resizeWhileMaintainingAspectRatioToSize(size: NSSize(width: 36.0, height: 120.0))
-        let cropped = resized!.crop(size: NSSize(width: 40.3, height: 130.0))
-        cropped?.isTemplate = true
-        return cropped!
-    }()
-    
-    private static var wlanOnIcon:NSImage = {
-        let wlanIcon = NSImage(named: NSImage.Name("wlanOn"))
-        wlanIcon?.isTemplate = true
-        return wlanIcon!
-    }()
-    
-    private static var wlanOffIcon:NSImage = {
-        let wlanIcon = NSImage(named: NSImage.Name("wlanOff"))
-        wlanIcon?.isTemplate = true
-        return wlanIcon!
-    }()
-    
-    private static var screenMirroringIcon:NSImage = {
-        let mirroringIcon = NSImage(named: NSImage.Name("mirroring"))
-        mirroringIcon?.isTemplate = true
-        return mirroringIcon!
-    }()
-    
-    private static var screenExtendingIcon:NSImage = {
-        let mirroringIcon = NSImage(named: NSImage.Name("extending"))
-        mirroringIcon?.isTemplate = true
-        return mirroringIcon!
-    }()
 
     class func register() {
         MASShortcutMonitor.shared()?.register(systemPrefsShortcut, withAction: {
@@ -67,45 +29,38 @@ class ShortcutManager {
         })
         
         MASShortcutMonitor.shared()?.register(micMuteShortcut, withAction: {
-            if(MuteMicManager.shared.isMuted() == true){
-                HUD.showImage(unmuteIcon, status: "Microphone              \nunmuted")
-                MuteMicManager.shared.toogleMute()
-                
+            if(MuteMicManager.isMuted() == true){
+                HUD.showImage(Icons.unmute, status: "Microphone              \nunmuted")
+                MuteMicManager.toggleMute()
             } else {
-                HUD.showImage(muteIcon, status: "Microphone              \nmuted")
-                MuteMicManager.shared.toogleMute()
-                
+                HUD.showImage(Icons.mute, status: "Microphone              \nmuted")
+                MuteMicManager.toggleMute()
             }
         })
         
         MASShortcutMonitor.shared()?.register(disableWlanShortcut, withAction: {
-            if(WifiManager.shared.isPowered == true){
-                HUD.showImage(wlanOffIcon, status: "Wi-Fi                        \ndisabled")
-                MuteMicManager.shared.toogleMute()
-                WifiManager.shared.toggleMasterSwitch(status: false)
-                
+            if(WifiManager.isPowered() == true){
+                HUD.showImage(Icons.wlanOff, status: "Wi-Fi                        \ndisabled")
+                WifiManager.disableWifi()
             } else {
-                HUD.showImage(wlanOnIcon, status: "Wi-Fi                        \nenabled")
-                WifiManager.shared.toggleMasterSwitch(status: true)
-                
+                HUD.showImage(Icons.wlanOn, status: "Wi-Fi                        \nenabled")
+                WifiManager.enableWifi()
             }
         })
         
         MASShortcutMonitor.shared()?.register(mirroringMonitorShortcut, withAction: {
             if(DisplayManager.getDisplayCount() > 1){
-                if(DisplayManager.isDisplayedMirrored() == true){
-                    HUD.showImage(screenExtendingIcon, status: "Screen                        \nextending")
-                    DisplayManager.toggleMirroring()
-                    
+                if(DisplayManager.isDisplayMirrored() == true){
+                    HUD.showImage(Icons.extending, status: "Screen                        \nextending")
+                    DisplayManager.disableHardwareMirroring()
                 } else {
-                    HUD.showImage(screenMirroringIcon, status: "Screen                        \nmirroring")
-                    DisplayManager.toggleMirroring()
+                    HUD.showImage(Icons.mirroring, status: "Screen                        \nmirroring")
+                    DisplayManager.enableHardwareMirroring()
                 }
             }
         })
         
     }
-    
     
     class func unregister() {
         MASShortcutMonitor.shared().unregisterShortcut(systemPrefsShortcut)

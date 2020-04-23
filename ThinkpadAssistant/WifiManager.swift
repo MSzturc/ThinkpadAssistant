@@ -8,33 +8,30 @@
 import Foundation
 import CoreWLAN
 
-class WifiManager {
+final class WifiManager {
     
-    static let shared = WifiManager()
-
-    let currentInterface = CWWiFiClient.shared().interface()
-    
-    var isPowered:Bool{
-        get{
-            if let isInterface = currentInterface {
-                return isInterface.powerOn()
-            }
-            return false
-        }
+    static func toggleWifi() {
+        isPowered() ? disableWifi() : enableWifi()
     }
     
+    static func disableWifi() {
+        toggleMasterSwitch(false)
+        
+    }
     
-    func toggleMasterSwitch(status:Bool) {
+    static func enableWifi() {
+        toggleMasterSwitch(true)
+    }
+    
+    static func isPowered() -> Bool {
+        return CWWiFiClient.shared().interface()?.powerOn() ?? false
+    }
+    
+    private static func toggleMasterSwitch(_ status:Bool) {
         do {
-            try currentInterface?.setPower(status)
+            try CWWiFiClient.shared().interface()?.setPower(status)
         } catch let error as NSError {
             print(error.localizedDescription)
-            
         }
-        catch {
-            print("Something went wrong, are you feeling OK?")
-            
-        };
     }
-
 }

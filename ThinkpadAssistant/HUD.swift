@@ -187,3 +187,49 @@ class HUD: NSView {
     }
     
 }
+
+class RoundedEffectView: NSVisualEffectView {
+    
+    var cornerRadius: CGFloat = 20 {
+        didSet{
+            needsDisplay = true
+        }
+    }
+    
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        setupView()
+    }
+    
+    required init?(coder decoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupView() {
+        translatesAutoresizingMaskIntoConstraints = false
+        blendingMode = .behindWindow
+        material = .popover
+        state = .active
+    }
+    
+    override func updateLayer() {
+        super.updateLayer()
+        layer?.cornerRadius = cornerRadius
+    }
+}
+
+
+extension NSView{
+    
+    func insertVisualEffectView(){
+        let vibrant = RoundedEffectView(frame: bounds)
+        
+        let monitor = NSApplication.shared.windows[0]
+        let xPos = NSWidth(monitor.screen!.frame)/2 - 100
+        let yPos = NSHeight(monitor.screen!.frame)/2 - 100 - (NSHeight(monitor.screen!.frame) / 5)
+        
+        vibrant.frame = NSRect(x: xPos, y: yPos, width: 200, height: 200)
+        
+        addSubview(vibrant, positioned: .below, relativeTo: nil)
+    }
+}

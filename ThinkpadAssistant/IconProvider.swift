@@ -1,12 +1,55 @@
 //
-//  NSImageExtensions.swift
+//  IconProvider.swift
 //  ThinkpadAssistant
 //
-//  Created by Matt on 20.04.20.
+//  Created by Matt on 23.04.20.
 //  Copyright © 2020 Matthäus Szturc. All rights reserved.
 //
 
 import Cocoa
+
+final class Icons {
+    
+    static let mute:NSImage = {
+        let image = NSImage(named: "NSTouchBarAudioInputMuteTemplate")
+        let resized = image!.resizeWhileMaintainingAspectRatioToSize(size: NSSize(width: 76.0, height: 120.0))
+        let cropped = resized!.crop(size: NSSize(width: 85.0, height: 130.0))
+        cropped?.isTemplate = true
+        return cropped!
+    }()
+    
+    static let unmute:NSImage = {
+        let image = NSImage(named: "NSTouchBarAudioInputTemplate")
+        let resized = image!.resizeWhileMaintainingAspectRatioToSize(size: NSSize(width: 36.0, height: 120.0))
+        let cropped = resized!.crop(size: NSSize(width: 40.3, height: 130.0))
+        cropped?.isTemplate = true
+        return cropped!
+    }()
+    
+    static let wlanOn:NSImage = {
+        let wlanIcon = NSImage(named: NSImage.Name("wlanOn"))
+        wlanIcon?.isTemplate = true
+        return wlanIcon!
+    }()
+    
+    static let wlanOff:NSImage = {
+        let wlanIcon = NSImage(named: NSImage.Name("wlanOff"))
+        wlanIcon?.isTemplate = true
+        return wlanIcon!
+    }()
+    
+    static let mirroring:NSImage = {
+        let mirroringIcon = NSImage(named: NSImage.Name("mirroring"))
+        mirroringIcon?.isTemplate = true
+        return mirroringIcon!
+    }()
+    
+    static let extending:NSImage = {
+        let mirroringIcon = NSImage(named: NSImage.Name("extending"))
+        mirroringIcon?.isTemplate = true
+        return mirroringIcon!
+    }()
+}
 
 extension NSImage {
     

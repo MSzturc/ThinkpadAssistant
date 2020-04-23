@@ -7,9 +7,18 @@
 //
 
 import CoreAudio
+
 final class MuteMicManager {
     
-    static let shared = MuteMicManager()
+    private static let shared = MuteMicManager()
+    
+    static func toggleMute() {
+        shared.toogleMute()
+    }
+    
+    static func isMuted() -> Bool {
+        return shared.isMuted()
+    }
     
     /// called in background twice!!
     var didChange: ((_ isMuted: Bool) -> Void)?
@@ -118,5 +127,26 @@ final class MuteMicManager {
 extension OSStatus {
     func handleError() {
         assert(self == kAudioHardwareNoError, "reason: \(self)")
+    }
+}
+
+extension Optional {
+    func assert(or defaultValue: Wrapped) -> Wrapped {
+        switch self {
+        case .none:
+            assertionFailure()
+            return defaultValue
+        case .some(let value):
+            return value
+        }
+    }
+    
+    func assertExecute(_ action: (Wrapped) throws -> Void) rethrows {
+        switch self {
+        case .none:
+            assertionFailure()
+        case .some(let value):
+            try action(value)
+        }
     }
 }
