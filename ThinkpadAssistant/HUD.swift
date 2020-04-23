@@ -123,6 +123,7 @@ class HUD: NSView {
     
     private func setStatus(_ status: String) {
         statusLabel.string = status
+        statusLabel.alignCenter(nil)
         statusLabel.sizeToFit()
     }
     
