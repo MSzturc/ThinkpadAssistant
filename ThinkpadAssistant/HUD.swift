@@ -141,32 +141,28 @@ class HUD: NSView {
     
     override func draw(_ rect: NSRect) { //(0.0, 0.0, 1280.0, 720.0)
         
-        var imageFrame = image?.bounds ?? .zero //128x128 Todo: Prüfen ob ein 2x bild verwendet wird
+        let xPos: CGFloat = 0
+        let yPos = CGFloat(156)
         
         
-        var statusLabelSize: CGSize = statusLabel.string.count > 0 ? statusLabel.string.size(withAttributes: [NSAttributedString.Key.font: statusLabel.font!]) : CGSize.zero
-        if statusLabelSize.width > 0.0 { //103x46
+        //Position Statuslabel
+        var statusLabelSize = CGSize.zero
+        if(statusLabel.string.count > 0){
+            statusLabelSize = statusLabel.string.size(withAttributes: [NSAttributedString.Key.font: statusLabel.font!])
             statusLabelSize.width += 10.0
         }
-        // Position elements
-        var yPos = CGFloat(156)
         
-        if statusLabelSize.height > 0.0 && imageFrame.size.height > 0.0 {
-            yPos += statusLabelSize.height //175
-        }
-        let xPos: CGFloat = 0
-        imageFrame.origin.y = yPos
-        imageFrame.origin.x = round((bounds.size.width - imageFrame.size.width) / 2) + xPos //576
-        image?.frame = imageFrame
-        
-        if statusLabelSize.height > 0.0 && imageFrame.size.height > 0.0 {
-            yPos -= statusLabelSize.height //129
-        }
         var statusLabelFrame = CGRect.zero
         statusLabelFrame.origin.y = yPos
-        statusLabelFrame.origin.x = round((bounds.size.width - statusLabelSize.width) / 2) + xPos //583
+        statusLabelFrame.origin.x = round((NSApplication.shared.windows[0].screen!.frame.width - statusLabelSize.width) / 2) + xPos //583
         statusLabelFrame.size = statusLabelSize
         statusLabel.frame = statusLabelFrame
+        
+        //Position Imageframe
+        var imageFrame = image?.bounds ?? .zero
+        imageFrame.origin.y = yPos + statusLabelSize.height
+        imageFrame.origin.x = round((NSApplication.shared.windows[0].screen!.frame.width - imageFrame.size.width) / 2) + xPos
+        image?.frame = imageFrame
         
     }
     
