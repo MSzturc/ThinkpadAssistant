@@ -57,7 +57,6 @@ class HUD: NSView {
     }
     
     private var image: NSView?
-    private var size: CGSize = .zero
     private let statusLabel = NSText(frame: .zero)
     private var windowController: NSWindowController?
     
@@ -140,51 +139,35 @@ class HUD: NSView {
     
     // MARK: - Layout & Drawing
     
-    override func draw(_ rect: NSRect) {
-        // Entirely cover the parent view
-        frame = superview?.bounds ?? .zero
+    override func draw(_ rect: NSRect) { //(0.0, 0.0, 1280.0, 720.0)
         
-        // Determine the total width and height needed
-        let maxWidth = bounds.size.width - 64
-        var totalSize = CGSize.zero
-        var imageFrame = image?.bounds ?? .zero
+        var imageFrame = image?.bounds ?? .zero //128x128 Todo: Prüfen ob ein 2x bild verwendet wird
         
-        imageFrame.size.width = min(imageFrame.size.width, maxWidth)
-        totalSize.width = max(totalSize.width, imageFrame.size.width)
-        totalSize.height += imageFrame.size.height
         
         var statusLabelSize: CGSize = statusLabel.string.count > 0 ? statusLabel.string.size(withAttributes: [NSAttributedString.Key.font: statusLabel.font!]) : CGSize.zero
-        if statusLabelSize.width > 0.0 {
+        if statusLabelSize.width > 0.0 { //103x46
             statusLabelSize.width += 10.0
         }
-        statusLabelSize.width = min(statusLabelSize.width, maxWidth)
-        totalSize.width = max(totalSize.width, statusLabelSize.width)
-        totalSize.height += statusLabelSize.height
-        
-        totalSize.width += 32
-        totalSize.height += 32
-        
         // Position elements
-        var yPos = round((bounds.size.height - totalSize.height) / 2) + 16 - (bounds.size.height / 5)
+        var yPos = CGFloat(156)
         
         if statusLabelSize.height > 0.0 && imageFrame.size.height > 0.0 {
-            yPos += statusLabelSize.height
+            yPos += statusLabelSize.height //175
         }
         let xPos: CGFloat = 0
         imageFrame.origin.y = yPos
-        imageFrame.origin.x = round((bounds.size.width - imageFrame.size.width) / 2) + xPos
+        imageFrame.origin.x = round((bounds.size.width - imageFrame.size.width) / 2) + xPos //576
         image?.frame = imageFrame
         
         if statusLabelSize.height > 0.0 && imageFrame.size.height > 0.0 {
-            yPos -= statusLabelSize.height
+            yPos -= statusLabelSize.height //129
         }
         var statusLabelFrame = CGRect.zero
         statusLabelFrame.origin.y = yPos
-        statusLabelFrame.origin.x = round((bounds.size.width - statusLabelSize.width) / 2) + xPos
+        statusLabelFrame.origin.x = round((bounds.size.width - statusLabelSize.width) / 2) + xPos //583
         statusLabelFrame.size = statusLabelSize
         statusLabel.frame = statusLabelFrame
         
-        size = totalSize
     }
     
 }
@@ -215,6 +198,8 @@ class RoundedEffectView: NSVisualEffectView {
     
     override func updateLayer() {
         super.updateLayer()
+        let xPos = NSApplication.shared.windows[0].screen!.frame.width/2 - 100
+        frame = NSRect(x: xPos, y: 140, width: 200, height: 200)
         layer?.cornerRadius = cornerRadius
     }
 }
@@ -224,13 +209,6 @@ extension NSView{
     
     func insertVisualEffectView(){
         let vibrant = RoundedEffectView(frame: bounds)
-        
-        let monitor = NSApplication.shared.windows[0]
-        let xPos = NSWidth(monitor.screen!.frame)/2 - 100
-        let yPos = NSHeight(monitor.screen!.frame)/2 - 100 - (NSHeight(monitor.screen!.frame) / 5)
-        
-        vibrant.frame = NSRect(x: xPos, y: yPos, width: 200, height: 200)
-        
         addSubview(vibrant, positioned: .below, relativeTo: nil)
     }
 }
