@@ -37,7 +37,9 @@ final class ShortcutManager {
         })
         
         MASShortcutMonitor.shared()?.register(disableWlanShortcut, withAction: {
-            if(WifiManager.isPowered() == true){
+            if(WifiManager.isPowered() == nil){
+                return
+            } else if(WifiManager.isPowered() == true){
                 HUD.showImage(Icons.wlanOff, status: "Wi-Fi\ndisabled")
                 WifiManager.disableWifi()
             } else {

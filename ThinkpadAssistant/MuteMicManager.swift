@@ -37,7 +37,6 @@ final class MuteMicManager {
     private var propertySize = UInt32(MemoryLayout<UInt32>.size)
     
     init() {
-        print("init")
         setupCurrentInputDeviceID()
         startListener()
     }
