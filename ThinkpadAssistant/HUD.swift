@@ -154,14 +154,17 @@ class HUD: NSView {
         
         var statusLabelFrame = CGRect.zero
         statusLabelFrame.origin.y = yPos
-        statusLabelFrame.origin.x = round((NSApplication.shared.windows[0].screen!.frame.width - statusLabelSize.width) / 2) + xPos //583
+        
+        
+        
+        statusLabelFrame.origin.x = round((NSScreen.main!.frame.width - statusLabelSize.width) / 2) + xPos //583
         statusLabelFrame.size = statusLabelSize
         statusLabel.frame = statusLabelFrame
         
         //Position Imageframe
         var imageFrame = image?.bounds ?? .zero
         imageFrame.origin.y = yPos + statusLabelSize.height
-        imageFrame.origin.x = round((NSApplication.shared.windows[0].screen!.frame.width - imageFrame.size.width) / 2) + xPos
+        imageFrame.origin.x = round((NSScreen.main!.frame.width - imageFrame.size.width) / 2) + xPos
         image?.frame = imageFrame
         
     }
@@ -194,7 +197,7 @@ class RoundedEffectView: NSVisualEffectView {
     
     override func updateLayer() {
         super.updateLayer()
-        let xPos = NSApplication.shared.windows[0].screen!.frame.width/2 - 100
+        let xPos = NSScreen.main!.frame.width/2 - 100
         frame = NSRect(x: xPos, y: 140, width: 200, height: 200)
         layer?.cornerRadius = cornerRadius
     }
