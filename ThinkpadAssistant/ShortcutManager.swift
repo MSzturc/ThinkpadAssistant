@@ -51,11 +51,17 @@ final class ShortcutManager {
         MASShortcutMonitor.shared()?.register(mirroringMonitorShortcut, withAction: {
             if(DisplayManager.getDisplayCount() > 1){
                 if(DisplayManager.isDisplayMirrored() == true){
-                    HUD.showImage(Icons.extending, status: "Screen\nextending")
-                    DisplayManager.disableHardwareMirroring()
+                    DispatchQueue.background(background: {
+                        DisplayManager.disableHardwareMirroring()
+                    }, completion:{
+                        HUD.showImage(Icons.extending, status: "Screen\nextending")
+                    })
                 } else {
-                    HUD.showImage(Icons.mirroring, status: "Screen\nmirroring")
-                    DisplayManager.enableHardwareMirroring()
+                    DispatchQueue.background(background: {
+                        DisplayManager.enableHardwareMirroring()
+                    }, completion:{
+                        HUD.showImage(Icons.mirroring, status: "Screen\nmirroring")
+                    })
                 }
             }
         })
