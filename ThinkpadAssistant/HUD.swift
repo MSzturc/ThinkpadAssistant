@@ -149,6 +149,11 @@ class HUD: NSView {
         var statusLabelSize = CGSize.zero
         if(statusLabel.string.count > 0){
             statusLabelSize = statusLabel.string.size(withAttributes: [NSAttributedString.Key.font: statusLabel.font!])
+            print(statusLabelSize)
+            
+            if(statusLabelSize.height < 46.0){
+                statusLabelSize.height += (46.0 - statusLabelSize.height) / 2
+            }
             statusLabelSize.width += 10.0
         }
         
@@ -163,7 +168,7 @@ class HUD: NSView {
         
         //Position Imageframe
         var imageFrame = image?.bounds ?? .zero
-        imageFrame.origin.y = yPos + statusLabelSize.height
+        imageFrame.origin.y = yPos + 46
         imageFrame.origin.x = round((NSScreen.main!.frame.width - imageFrame.size.width) / 2) + xPos
         image?.frame = imageFrame
         
