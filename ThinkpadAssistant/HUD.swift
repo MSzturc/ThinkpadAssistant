@@ -149,8 +149,8 @@ class HUD: NSView {
         var statusLabelSize = CGSize.zero
         if(statusLabel.string.count > 0){
             statusLabelSize = statusLabel.string.size(withAttributes: [NSAttributedString.Key.font: statusLabel.font!])
-            print(statusLabelSize)
             
+            //If it's a single line Statusmessage center it
             if(statusLabelSize.height < 46.0){
                 statusLabelSize.height += (46.0 - statusLabelSize.height) / 2
             }
