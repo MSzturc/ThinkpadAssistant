@@ -13,6 +13,9 @@
 		C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8457244DAA4500ECFFBD /* HUD.swift */; };
 		C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */; };
 		C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8466244E20D500ECFFBD /* WifiManager.swift */; };
+		C9B3F78C2462DC360082AD67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F78A2462DC360082AD67 /* Localizable.strings */; };
+		C9B3F7902462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F78E2462E0540082AD67 /* InfoPlist.strings */; };
+		C9B3F7932462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F7912462E0540082AD67 /* InfoPlist.strings */; };
 		C9DFD0252451BAA2000103A2 /* IconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFD0242451BAA2000103A2 /* IconProvider.swift */; };
 		DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */; };
 		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
@@ -48,6 +51,11 @@
 		C93B8457244DAA4500ECFFBD /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteMicManager.swift; sourceTree = "<group>"; };
 		C93B8466244E20D500ECFFBD /* WifiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiManager.swift; sourceTree = "<group>"; };
+		C9B3F7892462DA460082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		C9B3F78B2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C9B3F78D2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		C9B3F78F2462E0540082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9B3F7922462E0540082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9DFD0242451BAA2000103A2 /* IconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconProvider.swift; sourceTree = "<group>"; };
 		DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.debug.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
@@ -134,6 +142,8 @@
 				FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */,
 				FC56DEC31EE98AC7001ACE3F /* Main.storyboard */,
 				FC56DEC61EE98AC7001ACE3F /* Info.plist */,
+				C9B3F78E2462E0540082AD67 /* InfoPlist.strings */,
+				C9B3F78A2462DC360082AD67 /* Localizable.strings */,
 				C93B8424244A077000ECFFBD /* ShortcutManager.swift */,
 				C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */,
 				C93B8466244E20D500ECFFBD /* WifiManager.swift */,
@@ -151,6 +161,7 @@
 				FC56DED61EE98B3A001ACE3F /* Assets.xcassets */,
 				FC56DED81EE98B3A001ACE3F /* Main.storyboard */,
 				FC56DEDB1EE98B3A001ACE3F /* Info.plist */,
+				C9B3F7912462E0540082AD67 /* InfoPlist.strings */,
 			);
 			path = AutoLaunchHelper;
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = FC56DEB11EE98AC7001ACE3F;
 			productRefGroup = FC56DEBB1EE98AC7001ACE3F /* Products */;
@@ -255,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC56DEC21EE98AC7001ACE3F /* Assets.xcassets in Resources */,
+				C9B3F7902462E0540082AD67 /* InfoPlist.strings in Resources */,
+				C9B3F78C2462DC360082AD67 /* Localizable.strings in Resources */,
 				FC56DEC51EE98AC7001ACE3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC56DED71EE98B3A001ACE3F /* Assets.xcassets in Resources */,
+				C9B3F7932462E0540082AD67 /* InfoPlist.strings in Resources */,
 				FC56DEDA1EE98B3A001ACE3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,10 +375,35 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C9B3F78A2462DC360082AD67 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9B3F78B2462DC360082AD67 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C9B3F78E2462E0540082AD67 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9B3F78F2462E0540082AD67 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9B3F7912462E0540082AD67 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9B3F7922462E0540082AD67 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		FC56DEC31EE98AC7001ACE3F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FC56DEC41EE98AC7001ACE3F /* Base */,
+				C9B3F7892462DA460082AD67 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -372,6 +412,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FC56DED91EE98B3A001ACE3F /* Base */,
+				C9B3F78D2462DC360082AD67 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

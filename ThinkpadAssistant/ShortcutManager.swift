@@ -28,10 +28,10 @@ final class ShortcutManager {
         
         MASShortcutMonitor.shared()?.register(micMuteShortcut, withAction: {
             if(MuteMicManager.isMuted() == true){
-                HUD.showImage(Icons.unmute, status: "Microphone\nunmuted")
+                HUD.showImage(Icons.unmute, status: NSLocalizedString("Microphone\nunmuted", comment: ""))
                 MuteMicManager.toggleMute()
             } else {
-                HUD.showImage(Icons.mute, status: "Microphone\nmuted")
+                HUD.showImage(Icons.mute, status: NSLocalizedString("Microphone\nmuted", comment: ""))
                 MuteMicManager.toggleMute()
             }
         })
@@ -40,10 +40,10 @@ final class ShortcutManager {
             if(WifiManager.isPowered() == nil){
                 return
             } else if(WifiManager.isPowered() == true){
-                HUD.showImage(Icons.wlanOff, status: "Wi-Fi\ndisabled")
+                HUD.showImage(Icons.wlanOff, status: NSLocalizedString("Wi-Fi\ndisabled", comment: ""))
                 WifiManager.disableWifi()
             } else {
-                HUD.showImage(Icons.wlanOn, status: "Wi-Fi\nenabled")
+                HUD.showImage(Icons.wlanOn, status: NSLocalizedString("Wi-Fi\nenabled", comment: ""))
                 WifiManager.enableWifi()
             }
         })
@@ -54,13 +54,13 @@ final class ShortcutManager {
                     DispatchQueue.background(background: {
                         DisplayManager.disableHardwareMirroring()
                     }, completion:{
-                        HUD.showImage(Icons.extending, status: "Screen\nextending")
+                        HUD.showImage(Icons.extending, status: NSLocalizedString("Screen\nextending", comment: ""))
                     })
                 } else {
                     DispatchQueue.background(background: {
                         DisplayManager.enableHardwareMirroring()
                     }, completion:{
-                        HUD.showImage(Icons.mirroring, status: "Screen\nmirroring")
+                        HUD.showImage(Icons.mirroring, status: NSLocalizedString("Screen\nmirroring", comment: ""))
                     })
                 }
             }
