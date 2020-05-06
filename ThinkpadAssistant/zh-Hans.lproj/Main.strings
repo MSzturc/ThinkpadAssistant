@@ -1,0 +1,9 @@
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "主菜单";
+
+/* Class = "NSMenuItem"; title = "Launch on Login"; ObjectID = "Lcb-4h-zk2"; */
+"Lcb-4h-zk2.title" = "开机自启动";
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "Q77-Nx-rEG"; */
+"Q77-Nx-rEG.title" = "退出";

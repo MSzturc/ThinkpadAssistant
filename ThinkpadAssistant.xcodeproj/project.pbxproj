@@ -56,6 +56,11 @@
 		C9B3F78D2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		C9B3F78F2462E0540082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9B3F7922462E0540082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9B503742463269300673FFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		C9B503752463269300673FFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		C9B503762463269300673FFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		C9B503772463269300673FFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C9B503782463269400673FFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C9DFD0242451BAA2000103A2 /* IconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconProvider.swift; sourceTree = "<group>"; };
 		DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.debug.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
@@ -249,6 +254,7 @@
 				en,
 				Base,
 				de,
+				"zh-Hans",
 			);
 			mainGroup = FC56DEB11EE98AC7001ACE3F;
 			productRefGroup = FC56DEBB1EE98AC7001ACE3F /* Products */;
@@ -379,6 +385,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C9B3F78B2462DC360082AD67 /* de */,
+				C9B503772463269300673FFA /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -387,6 +394,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C9B3F78F2462E0540082AD67 /* de */,
+				C9B503762463269300673FFA /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C9B3F7922462E0540082AD67 /* de */,
+				C9B503782463269400673FFA /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -404,6 +413,7 @@
 			children = (
 				FC56DEC41EE98AC7001ACE3F /* Base */,
 				C9B3F7892462DA460082AD67 /* de */,
+				C9B503742463269300673FFA /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -413,6 +423,7 @@
 			children = (
 				FC56DED91EE98B3A001ACE3F /* Base */,
 				C9B3F78D2462DC360082AD67 /* de */,
+				C9B503752463269300673FFA /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
