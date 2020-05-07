@@ -41,7 +41,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func setupMenuBar() {
-        statusItem.button?.title = "T"
+        statusItem.button?.image = NSImage(named: "menuIcon")
+        statusItem.button?.image?.size = NSSize(width: 20, height: 20)
         statusItem.menu = statusBarMenu
         
         let foundHelper = NSWorkspace.shared.runningApplications.contains {
