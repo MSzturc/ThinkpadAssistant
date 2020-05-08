@@ -16,6 +16,8 @@ final class ShortcutManager {
     static let systemPrefsShortcut = MASShortcut(keyCode: kVK_F18, modifierFlags: [])
     static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
     static let micMuteShortcut = MASShortcut(keyCode: kVK_F20, modifierFlags: [])
+    static let micMuteShortcutActivate = MASShortcut(keyCode: kVK_F20, modifierFlags: [.control])
+    static let micMuteShortcutDeactivate = MASShortcut(keyCode: kVK_F20, modifierFlags: [.command])
     
     static func register() {
         MASShortcutMonitor.shared()?.register(systemPrefsShortcut, withAction: {
@@ -33,6 +35,20 @@ final class ShortcutManager {
             } else {
                 HUD.showImage(Icons.mute, status: NSLocalizedString("Microphone\nmuted", comment: ""))
                 MuteMicManager.toggleMute()
+            }
+        })
+        
+        MASShortcutMonitor.shared()?.register(micMuteShortcutActivate, withAction: {
+            if(MuteMicManager.isMuted() == true){
+                HUD.showImage(Icons.unmute, status: NSLocalizedString("Microphone\nunmuted", comment: ""))
+                MuteMicManager.activateMicrophone()
+            }
+        })
+        
+        MASShortcutMonitor.shared()?.register(micMuteShortcutDeactivate, withAction: {
+            if(MuteMicManager.isMuted() == false){
+                HUD.showImage(Icons.mute, status: NSLocalizedString("Microphone\nmuted", comment: ""))
+                MuteMicManager.deactivateMicrophone()
             }
         })
         

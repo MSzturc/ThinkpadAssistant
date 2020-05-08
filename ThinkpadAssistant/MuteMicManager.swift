@@ -12,6 +12,14 @@ final class MuteMicManager {
     
     private static let shared = MuteMicManager()
     
+    static func activateMicrophone(){
+        shared.activateMicrophone()
+    }
+    
+    static func deactivateMicrophone(){
+        shared.deactivateMicrophone()
+    }
+    
     static func toggleMute() {
         shared.toogleMute()
     }
@@ -64,6 +72,16 @@ final class MuteMicManager {
     func toogleMute() {
         assert(isMuteSettable())
         setMute(!isMuted())
+    }
+    
+    func activateMicrophone(){
+        assert(isMuteSettable())
+        setMute(false)
+    }
+    
+    func deactivateMicrophone(){
+        assert(isMuteSettable())
+        setMute(true)
     }
     
     private func isMuteSettable() -> Bool {
