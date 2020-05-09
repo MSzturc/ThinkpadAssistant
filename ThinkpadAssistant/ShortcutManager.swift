@@ -85,7 +85,7 @@ final class ShortcutManager {
     }
     
     static func unregister() {
-        MASShortcutMonitor.shared().unregisterShortcut(systemPrefsShortcut)
+        MASShortcutMonitor.shared().unregisterAllShortcuts()
     }
     
     private static func startApp(withBundleIdentifier: String){
