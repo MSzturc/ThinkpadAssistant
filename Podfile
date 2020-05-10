@@ -15,6 +15,5 @@ target 'ThinkpadAssistant' do
 
   # Pods for ThinkpadAssistant
   pod 'MASShortcut'
-  pod 'Defaults'
 
 end
