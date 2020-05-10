@@ -6,29 +6,29 @@
 //  Copyright © 2020 Matthäus Szturc. All rights reserved.
 //
 
-import Foundation
-import MASShortcut
+import Cocoa
 
 final class ShortcutManager {
     
-    static let mirroringMonitorShortcut = MASShortcut(keyCode: kVK_F16, modifierFlags: [])
-    static let disableWlanShortcut = MASShortcut(keyCode: kVK_F17, modifierFlags: [])
-    static let systemPrefsShortcut = MASShortcut(keyCode: kVK_F18, modifierFlags: [])
-    static let launchpadShortcut = MASShortcut(keyCode: kVK_F19, modifierFlags: [])
-    static let micMuteShortcut = MASShortcut(keyCode: kVK_F20, modifierFlags: [])
-    static let micMuteShortcutActivate = MASShortcut(keyCode: kVK_F20, modifierFlags: [.control])
-    static let micMuteShortcutDeactivate = MASShortcut(keyCode: kVK_F20, modifierFlags: [.command])
+    static let mirroringMonitorShortcut = Shortcut(key: .f16, modifiers: [])
+    static let disableWlanShortcut = Shortcut(key: .f17, modifiers: [])
+    static let systemPrefsShortcut = Shortcut(key: .f18, modifiers: [])
+    static let launchpadShortcut = Shortcut(key: .f19, modifiers: [])
+    static let micMuteShortcut = Shortcut(key: .f20, modifiers: [])
+    static let micMuteShortcutActivate = Shortcut(key: .f20, modifiers: [.control])
+    static let micMuteShortcutDeactivate = Shortcut(key: .f20, modifiers: [.command])
     
     static func register() {
-        MASShortcutMonitor.shared()?.register(systemPrefsShortcut, withAction: {
+        
+        ShortcutMonitor.shared.register(systemPrefsShortcut, withAction: {
             startApp(withBundleIdentifier: "com.apple.systempreferences")
         })
         
-        MASShortcutMonitor.shared()?.register(launchpadShortcut, withAction: {
+        ShortcutMonitor.shared.register(launchpadShortcut, withAction: {
             startApp(withBundleIdentifier: "com.apple.launchpad.launcher")
         })
         
-        MASShortcutMonitor.shared()?.register(micMuteShortcut, withAction: {
+        ShortcutMonitor.shared.register(micMuteShortcut, withAction: {
             if(MuteMicManager.isMuted() == true){
                 HUD.showImage(Icons.unmute, status: NSLocalizedString("Microphone\nunmuted", comment: ""))
                 MuteMicManager.toggleMute()
@@ -38,21 +38,21 @@ final class ShortcutManager {
             }
         })
         
-        MASShortcutMonitor.shared()?.register(micMuteShortcutActivate, withAction: {
+        ShortcutMonitor.shared.register(micMuteShortcutActivate, withAction: {
             if(MuteMicManager.isMuted() == true){
                 HUD.showImage(Icons.unmute, status: NSLocalizedString("Microphone\nunmuted", comment: ""))
                 MuteMicManager.activateMicrophone()
             }
         })
         
-        MASShortcutMonitor.shared()?.register(micMuteShortcutDeactivate, withAction: {
+        ShortcutMonitor.shared.register(micMuteShortcutDeactivate, withAction: {
             if(MuteMicManager.isMuted() == false){
                 HUD.showImage(Icons.mute, status: NSLocalizedString("Microphone\nmuted", comment: ""))
                 MuteMicManager.deactivateMicrophone()
             }
         })
         
-        MASShortcutMonitor.shared()?.register(disableWlanShortcut, withAction: {
+        ShortcutMonitor.shared.register(disableWlanShortcut, withAction: {
             if(WifiManager.isPowered() == nil){
                 return
             } else if(WifiManager.isPowered() == true){
@@ -64,7 +64,7 @@ final class ShortcutManager {
             }
         })
         
-        MASShortcutMonitor.shared()?.register(mirroringMonitorShortcut, withAction: {
+        ShortcutMonitor.shared.register(mirroringMonitorShortcut, withAction: {
             if(DisplayManager.getDisplayCount() > 1){
                 if(DisplayManager.isDisplayMirrored() == true){
                     DispatchQueue.background(background: {
@@ -85,7 +85,7 @@ final class ShortcutManager {
     }
     
     static func unregister() {
-        MASShortcutMonitor.shared().unregisterAllShortcuts()
+        ShortcutMonitor.shared.unregisterAllShortcuts()
     }
     
     private static func startApp(withBundleIdentifier: String){

@@ -13,6 +13,11 @@
 		C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8457244DAA4500ECFFBD /* HUD.swift */; };
 		C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */; };
 		C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8466244E20D500ECFFBD /* WifiManager.swift */; };
+		C93E0A8D24681AE000041485 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A8C24681AE000041485 /* Key.swift */; };
+		C93E0A9124681B4800041485 /* ShortcutMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9024681B4800041485 /* ShortcutMonitor.swift */; };
+		C93E0A9324681B9100041485 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9224681B9100041485 /* Shortcut.swift */; };
+		C93E0A9524684C1600041485 /* Hotkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9424684C1600041485 /* Hotkey.swift */; };
+		C93E0A9724685A2300041485 /* Extension.Carbon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9624685A2300041485 /* Extension.Carbon.swift */; };
 		C9B3F78C2462DC360082AD67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F78A2462DC360082AD67 /* Localizable.strings */; };
 		C9B3F7902462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F78E2462E0540082AD67 /* InfoPlist.strings */; };
 		C9B3F7932462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F7912462E0540082AD67 /* InfoPlist.strings */; };
@@ -51,6 +56,11 @@
 		C93B8457244DAA4500ECFFBD /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteMicManager.swift; sourceTree = "<group>"; };
 		C93B8466244E20D500ECFFBD /* WifiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiManager.swift; sourceTree = "<group>"; };
+		C93E0A8C24681AE000041485 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		C93E0A9024681B4800041485 /* ShortcutMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutMonitor.swift; sourceTree = "<group>"; };
+		C93E0A9224681B9100041485 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
+		C93E0A9424684C1600041485 /* Hotkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotkey.swift; sourceTree = "<group>"; };
+		C93E0A9624685A2300041485 /* Extension.Carbon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.Carbon.swift; sourceTree = "<group>"; };
 		C9B3F7892462DA460082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		C9B3F78B2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9B3F78D2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
@@ -117,6 +127,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C93E0A8924680D8B00041485 /* Shortcut */ = {
+			isa = PBXGroup;
+			children = (
+				C93E0A8C24681AE000041485 /* Key.swift */,
+				C93E0A9024681B4800041485 /* ShortcutMonitor.swift */,
+				C93E0A9224681B9100041485 /* Shortcut.swift */,
+				C93E0A9424684C1600041485 /* Hotkey.swift */,
+				C93E0A9624685A2300041485 /* Extension.Carbon.swift */,
+			);
+			path = Shortcut;
+			sourceTree = "<group>";
+		};
 		FC56DEB11EE98AC7001ACE3F = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +163,7 @@
 		FC56DEBC1EE98AC7001ACE3F /* ThinkpadAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				C93E0A8924680D8B00041485 /* Shortcut */,
 				FC56DEE11EE9B819001ACE3F /* ThinkpadAssistant.entitlements */,
 				FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */,
 				C93B8457244DAA4500ECFFBD /* HUD.swift */,
@@ -183,7 +206,6 @@
 				FC56DEB71EE98AC7001ACE3F /* Frameworks */,
 				FC56DEB81EE98AC7001ACE3F /* Resources */,
 				FC56DEDF1EE9A7F5001ACE3F /* CopyFiles */,
-				B66E9B1E7E52E507166B4862 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,23 +358,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B66E9B1E7E52E507166B4862 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -365,8 +370,13 @@
 				C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */,
 				C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */,
 				FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */,
+				C93E0A8D24681AE000041485 /* Key.swift in Sources */,
+				C93E0A9124681B4800041485 /* ShortcutMonitor.swift in Sources */,
+				C93E0A9324681B9100041485 /* Shortcut.swift in Sources */,
 				C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */,
+				C93E0A9724685A2300041485 /* Extension.Carbon.swift in Sources */,
 				C9DFD0252451BAA2000103A2 /* IconProvider.swift in Sources */,
+				C93E0A9524684C1600041485 /* Hotkey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.ThinkpadAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -583,7 +593,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.ThinkpadAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import MASShortcut
 import ServiceManagement
 
 @NSApplicationMain

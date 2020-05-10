@@ -14,6 +14,5 @@ target 'ThinkpadAssistant' do
   use_frameworks!
 
   # Pods for ThinkpadAssistant
-  pod 'MASShortcut'
 
 end
