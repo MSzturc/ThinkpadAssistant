@@ -29,9 +29,14 @@ public struct Shortcut: Equatable, Hashable {
         self.modifiers = modifiers
     }
     
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(carbonModifiers)
+        hasher.combine(carbonKeyCode)
+    }
+    
     static public func == (left: Shortcut, right: Shortcut) -> Bool {
-        return left.modifiers == right.modifiers &&
-                left.key == right.key
+        return left.carbonModifiers == right.carbonModifiers &&
+                left.carbonKeyCode == right.carbonKeyCode
     }
 
 }
