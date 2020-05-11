@@ -21,7 +21,7 @@ public class ShortcutMonitor {
     
     init() {
         let eventSpec = [
-            EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyReleased)),
+            EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyPressed)),
         ]
 
         var eventHandler: EventHandlerRef?
@@ -64,6 +64,14 @@ public class ShortcutMonitor {
         guard let nsevent = NSEvent(eventRef: UnsafeRawPointer(event)) else {
             return OSStatus(eventNotHandledErr)
         }
+        
+        let leftShift = nsevent.modifierFlags.contains(.leftShift)
+        
+        let rightShift = nsevent.modifierFlags.contains(.rightShift)
+        
+        let shift = nsevent.modifierFlags.contains(.shift)
+        
+        print(leftShift.description + " - " + rightShift.description + " - " + shift.description)
         
         var hotKeyID = EventHotKeyID()
 
