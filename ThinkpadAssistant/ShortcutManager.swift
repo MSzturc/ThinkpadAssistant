@@ -15,8 +15,8 @@ final class ShortcutManager {
     static let systemPrefsShortcut = Shortcut(key: .f18, modifiers: [])
     static let launchpadShortcut = Shortcut(key: .f19, modifiers: [])
     static let micMuteShortcut = Shortcut(key: .f20, modifiers: [])
-    static let micMuteShortcutActivate = Shortcut(key: .f20, modifiers: [.control])
-    static let micMuteShortcutDeactivate = Shortcut(key: .f20, modifiers: [.command])
+    static let micMuteShortcutActivate = Shortcut(key: .f20, modifiers: [.leftShift])
+    static let micMuteShortcutDeactivate = Shortcut(key: .f20, modifiers: [.rightShift])
     
     static func register() {
         

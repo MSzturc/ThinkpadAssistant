@@ -14,8 +14,9 @@ public class ShortcutMonitor {
     public static var shared: ShortcutMonitor = {
         return ShortcutMonitor()
     }()
-
-    private var hotkeys = [EventHotKeyID: Hotkey]()
+    
+    private var shortcuts = [EventHotKeyID: Shortcut]()
+    private var hotkeys = [Shortcut: [Hotkey]]()
     private var eventHandler: EventHandlerRef
     
     init() {
@@ -37,12 +38,21 @@ public class ShortcutMonitor {
     }
     
     public func register(_ shortcut: Shortcut, withAction: @escaping Hotkey.Handler) {
-        let hotkey = Hotkey(shortcut, withAction)
-        hotkeys[hotkey.id] = hotkey
+        
+        let shortcutNotRegistered = hotkeys[shortcut] == nil
+        let hotkey = Hotkey(shortcut, withAction, shortcutNotRegistered)
+        
+        if shortcutNotRegistered {
+            hotkeys[shortcut] = [hotkey]
+        } else {
+            hotkeys[shortcut]!.append(hotkey)
+        }
+        shortcuts[hotkey.id] = shortcut
     }
     
     public func unregisterAllShortcuts() {
         hotkeys.removeAll()
+        shortcuts.removeAll()
     }
 
     func handleEvent(_ event: EventRef?) -> OSStatus {
@@ -71,14 +81,20 @@ public class ShortcutMonitor {
             return err
         }
         
-        let hotkey = hotkeys[hotKeyID]
-        
-        if hotkey != nil {
-            if nsevent.modifierFlags.contains((hotkey?.shortcut.modifiers)!) {
-                hotkey!.handler()
-            }
-        } else {
+        let shortcut = shortcuts[hotKeyID]
+        if(shortcut == nil){
             return err
+        }
+        
+        let hotkeysForShortcut = hotkeys[shortcut!]
+        if(hotkeysForShortcut == nil){
+            return err
+        }
+        
+        for hotkey in hotkeysForShortcut! {
+            if nsevent.modifierFlags.contains((hotkey.shortcut.modifiers)) {
+                hotkey.handler()
+            }
         }
         return noErr
     }
