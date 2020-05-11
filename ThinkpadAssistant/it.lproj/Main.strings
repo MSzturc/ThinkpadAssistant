@@ -1,0 +1,9 @@
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Menu Principale";
+
+/* Class = "NSMenuItem"; title = "Launch on Login"; ObjectID = "Lcb-4h-zk2"; */
+"Lcb-4h-zk2.title" = "Avvia al Login";
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "Q77-Nx-rEG"; */
+"Q77-Nx-rEG.title" = "Esci";

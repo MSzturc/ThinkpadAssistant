@@ -1,0 +1,6 @@
+/* Bundle name */
+"CFBundleName" = "ThinkpadAssistant";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2020 Matthäus Szturc. Tutti i diritti riservati.";
+
