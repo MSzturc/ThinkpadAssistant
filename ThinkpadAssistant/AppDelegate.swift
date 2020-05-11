@@ -43,8 +43,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.image = NSImage(named: "menuIcon")
         statusItem.button?.alternateImage = NSImage(named: "menuIcon-light")
         
-        statusItem.button?.image?.size = NSSize(width: 20, height: 20)
-        statusItem.button?.alternateImage?.size = NSSize(width: 20, height: 20)
+        statusItem.button?.image?.size = NSSize(width: 18, height: 18)
+        statusItem.button?.alternateImage?.size = NSSize(width: 18, height: 18)
         
         statusItem.menu = statusBarMenu
         
