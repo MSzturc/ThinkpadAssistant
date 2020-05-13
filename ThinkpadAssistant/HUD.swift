@@ -186,22 +186,40 @@ class RoundedEffectView: NSVisualEffectView {
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        setupView()
+        updateView()
     }
     
     required init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupView() {
+    func updateView() {
         translatesAutoresizingMaskIntoConstraints = false
         blendingMode = .behindWindow
-        material = .popover
+        material = dynamicMaterial
+        appearance = dynamicAppearance
         state = .active
+    }
+    
+    private var dynamicAppearance: NSAppearance? {
+        if (UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light" == "Dark") {
+            return NSAppearance(named: .vibrantDark)
+        } else {
+            return NSAppearance(named: .vibrantLight)
+        }
+    }
+    
+    private var dynamicMaterial: Material {
+        if (UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light" == "Dark") {
+            return .dark
+        } else {
+            return .light
+        }
     }
     
     override func updateLayer() {
         super.updateLayer()
+        updateView()
         let xPos = NSScreen.main!.frame.width/2 - 100
         frame = NSRect(x: xPos, y: 140, width: 200, height: 200)
         layer?.cornerRadius = cornerRadius
