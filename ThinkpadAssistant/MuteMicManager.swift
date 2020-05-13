@@ -133,7 +133,6 @@ final class MuteMicManager {
         
         setMute(savedMute)
         startListener()
-        print("-",savedMute)
     }
     
     private func muteDidChange() {

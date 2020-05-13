@@ -65,14 +65,6 @@ public class ShortcutMonitor {
             return OSStatus(eventNotHandledErr)
         }
         
-        let leftShift = nsevent.modifierFlags.contains(.leftShift)
-        
-        let rightShift = nsevent.modifierFlags.contains(.rightShift)
-        
-        let shift = nsevent.modifierFlags.contains(.shift)
-        
-        print(leftShift.description + " - " + rightShift.description + " - " + shift.description)
-        
         var hotKeyID = EventHotKeyID()
 
         let err = GetEventParameter(
