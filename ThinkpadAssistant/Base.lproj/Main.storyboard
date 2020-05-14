@@ -73,16 +73,16 @@
             <objects>
                 <viewController id="ahD-Xn-7zm" customClass="AboutViewController" customModule="ThinkpadAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="xlW-zJ-aUL">
-                        <rect key="frame" x="0.0" y="0.0" width="360" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-fE-xbf">
-                                <rect key="frame" x="120" y="60" width="120" height="120"/>
+                                <rect key="frame" x="140" y="60" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="menuIcon" id="gtS-zh-FKF"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2UA-sF-QOA">
-                                <rect key="frame" x="100" y="36" width="160" height="16"/>
+                                <rect key="frame" x="120" y="36" width="160" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Version 1.0.0" usesSingleLineMode="YES" id="Yvs-Nm-uAg">
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -91,7 +91,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T1o-Dq-hQ6">
-                                <rect key="frame" x="10" y="18" width="340" height="15"/>
+                                <rect key="frame" x="20" y="18" width="360" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Copyright © 2020 Matthäus Szturc. All rights reserved." id="Dsc-bK-vCJ">
                                     <font key="font" metaFont="label" size="12"/>
