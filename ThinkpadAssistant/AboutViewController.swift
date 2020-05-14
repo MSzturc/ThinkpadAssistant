@@ -16,7 +16,7 @@ class AboutViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            self.versionLabel.stringValue = NSLocalizedString("Version ", comment: "") + version
+            self.versionLabel.stringValue = NSLocalizedString("Version", comment: "") + " " + version
         }
     }
 }
