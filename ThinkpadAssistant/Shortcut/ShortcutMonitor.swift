@@ -79,12 +79,11 @@ public class ShortcutMonitor {
             return err
         }
         
-        let shortcut = shortcuts[hotKeyID]
-        if(shortcut == nil){
+        guard let shortcut = shortcuts[hotKeyID] else {
             return err
         }
         
-        let hotkeysForShortcut = hotkeys[shortcut!]
+        let hotkeysForShortcut = hotkeys[shortcut]
         if(hotkeysForShortcut == nil){
             return err
         }
