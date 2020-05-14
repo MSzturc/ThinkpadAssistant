@@ -11,15 +11,13 @@ import Cocoa
 
 public class ShortcutMonitor {
     
-    public static var shared: ShortcutMonitor = {
-        return ShortcutMonitor()
-    }()
+    public static let shared = ShortcutMonitor()
     
     private var shortcuts = [EventHotKeyID: Shortcut]()
     private var hotkeys = [Shortcut: [Hotkey]]()
     private var eventHandler: EventHandlerRef
     
-    init() {
+    private init() {
         let eventSpec = [
             EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyPressed)),
         ]
