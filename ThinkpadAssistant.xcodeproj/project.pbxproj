@@ -18,6 +18,7 @@
 		C93E0A9324681B9100041485 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9224681B9100041485 /* Shortcut.swift */; };
 		C93E0A9524684C1600041485 /* Hotkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9424684C1600041485 /* Hotkey.swift */; };
 		C93E0A9724685A2300041485 /* Extension.Carbon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9624685A2300041485 /* Extension.Carbon.swift */; };
+		C9404795246D5B2F00C90C38 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404794246D5B2F00C90C38 /* AboutViewController.swift */; };
 		C9B3F78C2462DC360082AD67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F78A2462DC360082AD67 /* Localizable.strings */; };
 		C9B3F7902462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F78E2462E0540082AD67 /* InfoPlist.strings */; };
 		C9B3F7932462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F7912462E0540082AD67 /* InfoPlist.strings */; };
@@ -61,6 +62,7 @@
 		C93E0A9224681B9100041485 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		C93E0A9424684C1600041485 /* Hotkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotkey.swift; sourceTree = "<group>"; };
 		C93E0A9624685A2300041485 /* Extension.Carbon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.Carbon.swift; sourceTree = "<group>"; };
+		C9404794246D5B2F00C90C38 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C9B3F7892462DA460082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		C9B3F78B2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9B3F78D2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				C93B8466244E20D500ECFFBD /* WifiManager.swift */,
 				C91E2344244E3780007A1962 /* DisplayManager.swift */,
 				C9DFD0242451BAA2000103A2 /* IconProvider.swift */,
+				C9404794246D5B2F00C90C38 /* AboutViewController.swift */,
 			);
 			path = ThinkpadAssistant;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */,
 				C93E0A9724685A2300041485 /* Extension.Carbon.swift in Sources */,
 				C9DFD0252451BAA2000103A2 /* IconProvider.swift in Sources */,
+				C9404795246D5B2F00C90C38 /* AboutViewController.swift in Sources */,
 				C93E0A9524684C1600041485 /* Hotkey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
