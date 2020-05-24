@@ -19,6 +19,7 @@
 		C93E0A9524684C1600041485 /* Hotkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9424684C1600041485 /* Hotkey.swift */; };
 		C93E0A9724685A2300041485 /* Extension.Carbon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9624685A2300041485 /* Extension.Carbon.swift */; };
 		C9404795246D5B2F00C90C38 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404794246D5B2F00C90C38 /* AboutViewController.swift */; };
+		C947BB07247AFECB00E6AF14 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947BB06247AFECB00E6AF14 /* BluetoothManager.swift */; };
 		C9B3F78C2462DC360082AD67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F78A2462DC360082AD67 /* Localizable.strings */; };
 		C9B3F7902462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F78E2462E0540082AD67 /* InfoPlist.strings */; };
 		C9B3F7932462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F7912462E0540082AD67 /* InfoPlist.strings */; };
@@ -63,6 +64,8 @@
 		C93E0A9424684C1600041485 /* Hotkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotkey.swift; sourceTree = "<group>"; };
 		C93E0A9624685A2300041485 /* Extension.Carbon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.Carbon.swift; sourceTree = "<group>"; };
 		C9404794246D5B2F00C90C38 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		C947BB06247AFECB00E6AF14 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		C947BB08247B017700E6AF14 /* ThinkpadAssistant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThinkpadAssistant-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9B3F7892462DA460082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		C9B3F78B2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9B3F78D2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 				FC56DEBB1EE98AC7001ACE3F /* Products */,
 				926AC987C488408C1F64878E /* Pods */,
 				115363A5D0E7B98AE00FDE4E /* Frameworks */,
+				C947BB08247B017700E6AF14 /* ThinkpadAssistant-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -180,6 +184,7 @@
 				C9B3F78E2462E0540082AD67 /* InfoPlist.strings */,
 				C9B3F78A2462DC360082AD67 /* Localizable.strings */,
 				C93B8424244A077000ECFFBD /* ShortcutManager.swift */,
+				C947BB06247AFECB00E6AF14 /* BluetoothManager.swift */,
 				C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */,
 				C93B8466244E20D500ECFFBD /* WifiManager.swift */,
 				C91E2344244E3780007A1962 /* DisplayManager.swift */,
@@ -384,6 +389,7 @@
 				C93E0A9324681B9100041485 /* Shortcut.swift in Sources */,
 				C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */,
 				C93E0A9724685A2300041485 /* Extension.Carbon.swift in Sources */,
+				C947BB07247AFECB00E6AF14 /* BluetoothManager.swift in Sources */,
 				C9DFD0252451BAA2000103A2 /* IconProvider.swift in Sources */,
 				C9404795246D5B2F00C90C38 /* AboutViewController.swift in Sources */,
 				C93E0A9524684C1600041485 /* Hotkey.swift in Sources */,
@@ -572,6 +578,7 @@
 			baseConfigurationReference = DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ThinkpadAssistant/ThinkpadAssistant.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -587,6 +594,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.ThinkpadAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThinkpadAssistant-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -597,6 +606,7 @@
 			baseConfigurationReference = AE92EEF7DF0DF77FC8C1D8CC /* Pods-ThinkpadAssistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ThinkpadAssistant/ThinkpadAssistant.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -612,6 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.ThinkpadAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ThinkpadAssistant-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};

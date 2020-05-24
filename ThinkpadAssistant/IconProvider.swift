@@ -16,9 +16,12 @@ final class Icons {
     static let wlanOff = load(iconName: "wlanOff")
     static let mirroring = load(iconName: "mirroring")
     static let extending = load(iconName: "extending")
+    static let bluetoothOn = load(iconName: "bluetoothOn")
+    static let bluetoothOff = load(iconName: "bluetoothOff")
     
     private static func load(iconName: String) -> NSImage {
         let icon = NSImage(named: NSImage.Name(iconName))
+        icon?.size = NSSize(width: 128, height: 128)
         icon?.isTemplate = true
         return icon!
     }
