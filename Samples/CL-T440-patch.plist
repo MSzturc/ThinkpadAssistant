@@ -1,0 +1,90 @@
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q15,0,N) to XQ15</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1ExNQA=</data>
+		<key>Replace</key>
+		<data>WFExNQA=</data>
+</dict>
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q14,0,N) to XQ14</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1ExNAA=</data>
+		<key>Replace</key>
+		<data>WFExNAA=</data>
+</dict>
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q6A,0,N) to XQ6A</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1E2QQA=</data>
+		<key>Replace</key>
+		<data>WFE2QQA=</data>
+</dict>
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q16,0,N) to XQ16</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1ExNgA=</data>
+		<key>Replace</key>
+		<data>WFExNgA=</data>
+</dict>
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q64,0,N) to XQ64</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1E2NAA=</data>
+		<key>Replace</key>
+		<data>WFE2NAA=</data>
+</dict>
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q66,0,N) to XQ66</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1E2NgA=</data>
+		<key>Replace</key>
+		<data>WFE2NgA=</data>
+</dict>
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q67,0,N) to XQ67</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1E2NwA=</data>
+		<key>Replace</key>
+		<data>WFE2NwA=</data>
+</dict>
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q68,0,N) to XQ68</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1E2OAA=</data>
+		<key>Replace</key>
+		<data>WFE2OAA=</data>
+</dict>
+<dict>
+		<key>Comment</key>
+		<string>Change Method(_Q69,0,N) to XQ69</string>
+		<key>Disabled</key>
+		<false/>
+		<key>Find</key>
+		<data>X1E2OQA=</data>
+		<key>Replace</key>
+		<data>WFE2OQA=</data>
+</dict>
