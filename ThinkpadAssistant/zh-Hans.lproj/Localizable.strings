@@ -1,4 +1,10 @@
 /* No comment provided by engineer. */
+"Bluetooth\ndisabled" = "关闭蓝牙";
+
+/* No comment provided by engineer. */
+"Bluetooth\nenabled" = "打开蓝牙";
+
+/* No comment provided by engineer. */
 "Microphone\nmuted" = "麦克风静音";
 
 /* No comment provided by engineer. */
@@ -11,8 +17,9 @@
 "Screen\nmirroring" = "镜像屏幕";
 
 /* No comment provided by engineer. */
-"Wi-Fi\ndisabled" = "WLAN 关闭";
+"Wi-Fi\ndisabled" = "关闭 Wi-Fi";
 
 /* No comment provided by engineer. */
-"Wi-Fi\nenabled" = "WLAN 开启";
+"Wi-Fi\nenabled" = "打开 Wi-Fi";
+
 

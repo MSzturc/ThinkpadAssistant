@@ -1,4 +1,10 @@
 /* No comment provided by engineer. */
+"Bluetooth\ndisabled" = "Bluetooth deaktiviert";
+
+/* No comment provided by engineer. */
+"Bluetooth\nenabled" = "Bluetooth aktiviert";
+
+/* No comment provided by engineer. */
 "Microphone\nmuted" = "Mikrofon stumm";
 
 /* No comment provided by engineer. */
@@ -9,6 +15,9 @@
 
 /* No comment provided by engineer. */
 "Screen\nmirroring" = "Bildschirm dupliziert";
+
+/* No comment provided by engineer. */
+"Version" = "Version";
 
 /* No comment provided by engineer. */
 "Wi-Fi\ndisabled" = "WLAN deaktiviert";

@@ -18,33 +18,37 @@ public class Hotkey: Equatable {
     public let shortcut: Shortcut
     public let handler: Handler
     public let id: EventHotKeyID
-    private var hotKeyRef: EventHotKeyRef
+    private var hotKeyRef: EventHotKeyRef?
     
-    public init(_ shortcut: Shortcut, _ handler: @escaping Handler) {
+    public init(_ shortcut: Shortcut, _ handler: @escaping Handler, _ registerHotkey: Bool = true) {
         self.shortcut = shortcut
         self.handler = handler
         Hotkey.count += 1
         self.id = EventHotKeyID(signature: Hotkey.signature, id: Hotkey.count)
         
-        var eventHotKeyRef: EventHotKeyRef?
-        
-        let registerErr = RegisterEventHotKey(
-            shortcut.carbonKeyCode,
-            shortcut.carbonModifiers,
-            id,
-            GetEventDispatcherTarget(),
-            0,
-            &eventHotKeyRef
-        )
+        if registerHotkey == true {
+            var eventHotKeyRef: EventHotKeyRef?
+            
+            let registerErr = RegisterEventHotKey(
+                shortcut.carbonKeyCode,
+                shortcut.carbonModifiers,
+                id,
+                GetEventDispatcherTarget(),
+                0,
+                &eventHotKeyRef
+            )
 
-        assert(registerErr == noErr)
-        assert(eventHotKeyRef != nil)
-        
-        self.hotKeyRef = eventHotKeyRef!
+            assert(registerErr == noErr)
+            assert(eventHotKeyRef != nil)
+            
+            self.hotKeyRef = eventHotKeyRef!
+        }
     }
     
     deinit {
-        UnregisterEventHotKey(hotKeyRef)
+        if hotKeyRef != nil {
+            UnregisterEventHotKey(hotKeyRef)
+        }
     }
     
     static public func == (left: Hotkey, right: Hotkey) -> Bool {

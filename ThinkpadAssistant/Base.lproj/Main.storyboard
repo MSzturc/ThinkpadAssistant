@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -13,14 +14,15 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ThinkpadAssistant" customModuleProvider="target">
-                    <connections>
-                        <outlet property="launchAtLoginMenuItem" destination="Lcb-4h-zk2" id="UmP-X8-dov"/>
-                        <outlet property="statusBarMenu" destination="XrB-HN-vRU" id="O8s-cs-J3B"/>
-                    </connections>
-                </customObject>
                 <menu identifier="statusBarMenu" id="XrB-HN-vRU">
                     <items>
+                        <menuItem title="About Thinkpad Assistant" id="Kql-K9-yoI">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <segue destination="xkd-VN-pTw" kind="show" id="bCd-4v-Rd2"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="0kS-3Y-egi"/>
                         <menuItem title="Launch on Login" id="Lcb-4h-zk2">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
@@ -37,8 +39,78 @@
                     </items>
                 </menu>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ThinkpadAssistant" customModuleProvider="target">
+                    <connections>
+                        <outlet property="launchAtLoginMenuItem" destination="Lcb-4h-zk2" id="UmP-X8-dov"/>
+                        <outlet property="statusBarMenu" destination="XrB-HN-vRU" id="O8s-cs-J3B"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="84" y="-133"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="Ju7-Gn-Uws">
+            <objects>
+                <windowController id="xkd-VN-pTw" sceneMemberID="viewController">
+                    <window key="window" title="About Thinkpad Assistant" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="eOf-uU-tUq">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="193" y="199" width="360" height="200"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1424" height="779"/>
+                        <connections>
+                            <outlet property="delegate" destination="xkd-VN-pTw" id="PhD-ap-5wo"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="ahD-Xn-7zm" kind="relationship" relationship="window.shadowedContentViewController" id="P5g-Kv-Qtq"/>
+                    </connections>
+                </windowController>
+                <customObject id="kgJ-Z2-4TW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="164.5"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="cZk-Md-USw">
+            <objects>
+                <viewController id="ahD-Xn-7zm" customClass="AboutViewController" customModule="ThinkpadAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="xlW-zJ-aUL">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-fE-xbf">
+                                <rect key="frame" x="140" y="60" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="menuIcon" id="gtS-zh-FKF"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2UA-sF-QOA">
+                                <rect key="frame" x="120" y="36" width="160" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Version 1.0.0" usesSingleLineMode="YES" id="Yvs-Nm-uAg">
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T1o-Dq-hQ6">
+                                <rect key="frame" x="20" y="18" width="360" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Copyright © 2020 Matthäus Szturc. All rights reserved." id="Dsc-bK-vCJ">
+                                    <font key="font" metaFont="label" size="12"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="versionLabel" destination="2UA-sF-QOA" id="pax-E0-cXV"/>
+                    </connections>
+                </viewController>
+                <customObject id="qtf-ca-JAy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="545"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="menuIcon" width="1024" height="1024"/>
+    </resources>
 </document>

@@ -12,16 +12,27 @@ final class ShortcutManager {
     
     static let mirroringMonitorShortcut = Shortcut(key: .f16, modifiers: [])
     static let disableWlanShortcut = Shortcut(key: .f17, modifiers: [])
+    static let disableBluetoothShortcut = Shortcut(key: .f17, modifiers: [.leftShift])
     static let systemPrefsShortcut = Shortcut(key: .f18, modifiers: [])
     static let launchpadShortcut = Shortcut(key: .f19, modifiers: [])
     static let micMuteShortcut = Shortcut(key: .f20, modifiers: [])
-    static let micMuteShortcutActivate = Shortcut(key: .f20, modifiers: [.control])
-    static let micMuteShortcutDeactivate = Shortcut(key: .f20, modifiers: [.command])
+    static let micMuteShortcutActivate = Shortcut(key: .f20, modifiers: [.leftShift])
+    static let micMuteShortcutDeactivate = Shortcut(key: .f20, modifiers: [.rightShift])
     
     static func register() {
         
         ShortcutMonitor.shared.register(systemPrefsShortcut, withAction: {
             startApp(withBundleIdentifier: "com.apple.systempreferences")
+        })
+        
+        ShortcutMonitor.shared.register(disableBluetoothShortcut, withAction: {
+            if(BluetoothManager.isEnabled() == true){
+                HUD.showImage(Icons.bluetoothOff, status: NSLocalizedString("Bluetooth\ndisabled", comment: ""))
+                BluetoothManager.disableBluetooth()
+            } else {
+                HUD.showImage(Icons.bluetoothOn, status: NSLocalizedString("Bluetooth\nenabled", comment: ""))
+                BluetoothManager.enableBluetooth()
+            }
         })
         
         ShortcutMonitor.shared.register(launchpadShortcut, withAction: {
