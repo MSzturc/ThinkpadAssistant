@@ -1,4 +1,10 @@
 /* No comment provided by engineer. */
+"Bluetooth\ndisabled" = "Bluetooth\nspento";
+
+/* No comment provided by engineer. */
+"Bluetooth\nenabled" = "Bluetooth\nacceso";
+
+/* No comment provided by engineer. */
 "Microphone\nmuted" = "Microfono\nmuto";
 
 /* No comment provided by engineer. */
@@ -15,4 +21,3 @@
 
 /* No comment provided by engineer. */
 "Wi-Fi\nenabled" = "Wi-Fi\nacceso";
-
