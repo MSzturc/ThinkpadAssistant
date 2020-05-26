@@ -51,4 +51,5 @@ An Assistant Application that allows you to use all your Function Keys on a T-Se
 | [X1C6](https://github.com/MSzturc/ThinkpadAssistant/tree/master/Samples/X1C6) | [tylernguyen](https://github.com/tylernguyen) | OpenCore / Clover | [x1c6-hackintosh](https://github.com/tylernguyen/x1c6-hackintosh)
 | [T440p](https://github.com/MSzturc/ThinkpadAssistant/tree/master/Samples/T440p) | [pandel](https://www.hackintosh-forum.de/user/52804-pandel/) | Clover | - 
 | T460s | [simprecicchiani](https://github.com/simprecicchiani) | OpenCore | [Thinkpad-T460s-macOS-OpenCore](https://github.com/simprecicchiani/Thinkpad-T460s-macOS-OpenCore) 
+| T470s | [YBN-JUAN](https://github.com/YBN-JUAN) | OpenCore | [T470s-OpenCore-EFI](https://github.com/YBN-JUAN/T470s-OpenCore-EFI) 
 
