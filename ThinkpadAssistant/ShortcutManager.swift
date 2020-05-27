@@ -76,20 +76,18 @@ final class ShortcutManager {
         })
         
         ShortcutMonitor.shared.register(mirroringMonitorShortcut, withAction: {
-            if(DisplayManager.getDisplayCount() > 1){
-                if(DisplayManager.isDisplayMirrored() == true){
-                    DispatchQueue.background(background: {
-                        DisplayManager.disableHardwareMirroring()
-                    }, completion:{
-                        HUD.showImage(Icons.extending, status: NSLocalizedString("Screen\nextending", comment: ""))
-                    })
-                } else {
-                    DispatchQueue.background(background: {
-                        DisplayManager.enableHardwareMirroring()
-                    }, completion:{
-                        HUD.showImage(Icons.mirroring, status: NSLocalizedString("Screen\nmirroring", comment: ""))
-                    })
-                }
+            if(DisplayManager.isDisplayMirrored() == true){
+                DispatchQueue.background(background: {
+                    DisplayManager.disableHardwareMirroring()
+                }, completion:{
+                    HUD.showImage(Icons.extending, status: NSLocalizedString("Screen\nextending", comment: ""))
+                })
+            } else {
+                DispatchQueue.background(background: {
+                    DisplayManager.enableHardwareMirroring()
+                }, completion:{
+                    HUD.showImage(Icons.mirroring, status: NSLocalizedString("Screen\nmirroring", comment: ""))
+                })
             }
         })
         
