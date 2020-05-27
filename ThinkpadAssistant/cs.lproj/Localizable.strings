@@ -17,4 +17,10 @@
 "Wi-Fi\nenabled" = "Wi-Fi\nzapnuta";
 
 /* No comment provided by engineer. */
+"Bluetooth\ndisabled" = "Bluetooth\nvypnuto";
+
+/* No comment provided by engineer. */
+"Bluetooth\nenabled" = "Bluetooth\nzapnuto";
+
+/* No comment provided by engineer. */
 "Version" = "Verze";
