@@ -1,4 +1,13 @@
 /* No comment provided by engineer. */
+"Backlight\nbright" = "键盘背光";
+
+/* No comment provided by engineer. */
+"Backlight\ndimmed" = "键盘弱光";
+
+/* No comment provided by engineer. */
+"Backlight\noff" = "关闭键盘背光";
+
+/* No comment provided by engineer. */
 "Bluetooth\ndisabled" = "关闭蓝牙";
 
 /* No comment provided by engineer. */
@@ -15,6 +24,9 @@
 
 /* No comment provided by engineer. */
 "Screen\nmirroring" = "镜像屏幕";
+
+/* No comment provided by engineer. */
+"Version" = "版本";
 
 /* No comment provided by engineer. */
 "Wi-Fi\ndisabled" = "关闭 Wi-Fi";
