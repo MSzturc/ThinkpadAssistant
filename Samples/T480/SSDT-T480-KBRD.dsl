@@ -16,15 +16,18 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_KBD", 0x00000000)
     External (\_SB.PCI0.LPCB.EC.XQ61, MethodObj)
     External (\_SB.PCI0.LPCB.EC.XQ62, MethodObj)
 
+    External (\_SB.PCI0.LPCB.EC.HKEY.MLCS, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ1F, MethodObj)
 
     Scope (\_SB.PCI0.LPCB.EC)
     {
         Name (LED1, Zero)
+        Name (LED2, Zero)
 
         Method (_Q14, 0, NotSerialized)  // _Qxx: EC Query
         {
             Notify (\_SB.PCI0.LPCB.KBD, 0x0206)
-            Notify (\_SB.PCI0.LPCB.KBD, 0x0286) 
+            Notify (\_SB.PCI0.LPCB.KBD, 0x0286)
         }
 
         Method (_Q15, 0, NotSerialized)  // _Qxx: EC Query
@@ -155,5 +158,55 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_KBD", 0x00000000)
             }
         }
 
+        // _Q1F - (Fn+Space) Toggle Keyboard Backlight.
+        Method (_Q1F, 0, NotSerialized) // cycle keyboard backlight
+        {
+            If (_OSI ("Darwin"))
+            {
+                // Cycle keyboard backlight states
+
+                If ((LED2 == Zero))
+                {
+                    // Right Shift + F16.
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x0136)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x0367)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x01b6)
+                    //  Off to dim
+                    \_SB.PCI0.LPCB.EC.HKEY.MLCS (One)
+                    LED2 = One
+                }
+                Else
+                {
+                    If ((LED2 == One))
+                    {
+                        // Left Shift + F19.
+                        Notify (\_SB.PCI0.LPCB.KBD, 0x012a)
+                        Notify (\_SB.PCI0.LPCB.KBD, 0x036a)
+                        Notify (\_SB.PCI0.LPCB.KBD, 0x01aa)
+                        //  dim to bright
+                        \_SB.PCI0.LPCB.EC.HKEY.MLCS (0x02)
+                        LED2 = 2
+                    }
+                    Else
+                    {
+                        If ((LED2 == 2))
+                        {
+                            // Left Shift + F16.
+                            Notify (\_SB.PCI0.LPCB.KBD, 0x012a)
+                            Notify (\_SB.PCI0.LPCB.KBD, 0x0367)
+                            Notify (\_SB.PCI0.LPCB.KBD, 0x01aa)
+                            // bright to off
+                            \_SB.PCI0.LPCB.EC.HKEY.MLCS (Zero)
+                            LED2 = Zero
+                        }
+                        Else
+                        {
+                            // Call original _Q6A method.
+                            \_SB.PCI0.LPCB.EC.XQ1F ()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
