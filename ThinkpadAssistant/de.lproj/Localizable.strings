@@ -1,4 +1,13 @@
 /* No comment provided by engineer. */
+"Backlight\nbright" = "Tastatur beleuchtet";
+
+/* No comment provided by engineer. */
+"Backlight\ndimmed" = "Tastatur gedimmt";
+
+/* No comment provided by engineer. */
+"Backlight\noff" = "Beleuchtung aus";
+
+/* No comment provided by engineer. */
 "Bluetooth\ndisabled" = "Bluetooth deaktiviert";
 
 /* No comment provided by engineer. */
