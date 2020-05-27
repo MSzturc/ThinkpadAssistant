@@ -14,6 +14,7 @@ An Assistant Application that allows you to use all your Function Keys on a T-Se
 - <b>Left Shift+F8</b>: Activate / Deactivate Bluetooth
 - <b>F9</b>: Open System Preferences
 - <b>F12</b>: Open Launchpad
+- <b>FN+Space</b>: Toggle Keyboard Backlight
 
 ## Demo
 ![Demo](Screens/demo.gif)
