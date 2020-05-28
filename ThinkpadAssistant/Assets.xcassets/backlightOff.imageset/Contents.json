@@ -1,15 +1,23 @@
 {
   "images" : [
     {
-      "filename" : "backlitoff.pdf",
-      "idiom" : "universal"
+      "filename" : "backlitoff_Normal-min.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "backlitoff_Normal@2x-min.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "backlitoff_Normal@2x-min-1.png",
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

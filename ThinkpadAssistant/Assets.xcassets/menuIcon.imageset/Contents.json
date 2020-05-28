@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "filename" : "thinkpadkeyboard1.pdf",
-      "idiom" : "universal"
+      "filename" : "menuIcon1_Normal-min.png",
+      "idiom" : "universal",
+      "scale" : "1x"
     },
     {
       "appearances" : [
@@ -11,15 +12,45 @@
           "value" : "dark"
         }
       ],
-      "filename" : "thinkpadkeyboard.pdf",
-      "idiom" : "universal"
+      "filename" : "menuIcon_Normal-min.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "menuIcon1_Normal@2x-min.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "menuIcon_Normal@2x-min.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "menuIcon1_Normal@2x-min-1.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "menuIcon_Normal@2x-min-1.png",
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }
