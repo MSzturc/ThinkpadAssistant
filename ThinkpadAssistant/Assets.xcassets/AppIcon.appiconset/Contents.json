@@ -1,61 +1,61 @@
 {
   "images" : [
     {
-      "filename" : "thinkpadkeyboard1-16.png",
+      "filename" : "appIcon-16-min.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "thinkpadkeyboard1-33.png",
+      "filename" : "appIcon-32-min.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "thinkpadkeyboard1-32.png",
+      "filename" : "appIcon-32-min-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "thinkpadkeyboard1-64.png",
+      "filename" : "appIcon-64-min.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "thinkpadkeyboard1-128.png",
+      "filename" : "appIcon-128-min.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "thinkpadkeyboard1-257.png",
+      "filename" : "appIcon-256-min.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "thinkpadkeyboard1-256.png",
+      "filename" : "appIcon-256-min-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "thinkpadkeyboard1-513.png",
+      "filename" : "appIcon-512-min.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "thinkpadkeyboard1-512.png",
+      "filename" : "appIcon-512-min-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "thinkpadkeyboard1-1024.png",
+      "filename" : "appIcon-1024-min.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
