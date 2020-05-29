@@ -1,4 +1,13 @@
 /* No comment provided by engineer. */
+"Backlight\nbright" = "Retroilluminazione\nalta";
+
+/* No comment provided by engineer. */
+"Backlight\ndimmed" = "Retroilluminazione\nbassa";
+
+/* No comment provided by engineer. */
+"Backlight\noff" = "Retroilluminazione\nspenta";
+
+/* No comment provided by engineer. */
 "Bluetooth\ndisabled" = "Bluetooth\nspento";
 
 /* No comment provided by engineer. */
@@ -15,6 +24,9 @@
 
 /* No comment provided by engineer. */
 "Screen\nmirroring" = "Schermo\nduplicato";
+
+/* No comment provided by engineer. */
+"Version" = "Versione";
 
 /* No comment provided by engineer. */
 "Wi-Fi\ndisabled" = "Wi-Fi\nspento";
