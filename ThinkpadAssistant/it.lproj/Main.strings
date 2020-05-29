@@ -6,10 +6,10 @@
 "Dsc-bK-vCJ.title" = "Copyright © 2020 Matthäus Szturc. Tutti i diritti riservati.";
 
 /* Class = "NSWindow"; title = "About Thinkpad Assistant"; ObjectID = "eOf-uU-tUq"; */
-"eOf-uU-tUq.title" = "Informazioni";
+"eOf-uU-tUq.title" = "Thinkpad Assistant";
 
 /* Class = "NSMenuItem"; title = "About Thinkpad Assistant"; ObjectID = "Kql-K9-yoI"; */
-"Kql-K9-yoI.title" = "Thinkpad Assistant";
+"Kql-K9-yoI.title" = "Informazioni";
 
 /* Class = "NSMenuItem"; title = "Launch on Login"; ObjectID = "Lcb-4h-zk2"; */
 "Lcb-4h-zk2.title" = "Avvia al Login";
