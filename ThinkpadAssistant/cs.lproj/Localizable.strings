@@ -1,4 +1,13 @@
 /* No comment provided by engineer. */
+"Backlight\nbright" = "Podsvícení\nplný jas";
+
+/* No comment provided by engineer. */
+"Backlight\ndimmed" = "Podsvícení\npoloviční jas";
+
+/* No comment provided by engineer. */
+"Backlight\noff" = "Podsvícení\nvypnuto";
+
+/* No comment provided by engineer. */
 "Microphone\nmuted" = "Mikrofon\nztlumen";
 
 /* No comment provided by engineer. */
@@ -15,6 +24,12 @@
 
 /* No comment provided by engineer. */
 "Wi-Fi\nenabled" = "Wi-Fi\nzapnuta";
+
+/* No comment provided by engineer. */
+"Bluetooth\ndisabled" = "Bluetooth\nvypnuto";
+
+/* No comment provided by engineer. */
+"Bluetooth\nenabled" = "Bluetooth\nzapnuto";
 
 /* No comment provided by engineer. */
 "Version" = "Verze";

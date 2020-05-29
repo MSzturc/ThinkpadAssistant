@@ -1,4 +1,4 @@
-<div><img src="ThinkpadAssistant/Assets.xcassets/AppIcon.appiconset/thinkpadkeyboard1-64.png" width="48" height="48" align="left"/><h1>Thinkpad Assistant</h1></div>
+<div><img src="ThinkpadAssistant/Assets.xcassets/AppIcon.appiconset/appIcon-64-min.png" width="48" height="48" align="left"/><h1>Thinkpad Assistant</h1></div>
 An Assistant Application that allows you to use all your Function Keys on a T-Series Thinkpad Laptop
 
 ## Discussion
@@ -14,6 +14,7 @@ An Assistant Application that allows you to use all your Function Keys on a T-Se
 - <b>Left Shift+F8</b>: Activate / Deactivate Bluetooth
 - <b>F9</b>: Open System Preferences
 - <b>F12</b>: Open Launchpad
+- <b>FN+Space</b>: Toggle Keyboard Backlight
 
 ## Demo
 ![Demo](Screens/demo.gif)

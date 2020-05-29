@@ -18,6 +18,9 @@ final class Icons {
     static let extending = load(iconName: "extending")
     static let bluetoothOn = load(iconName: "bluetoothOn")
     static let bluetoothOff = load(iconName: "bluetoothOff")
+    static let backlightOff = load(iconName: "backlightOff")
+    static let backlightDimmed = load(iconName: "backlightDimmed")
+    static let backlightBright = load(iconName: "backlightBright")
     
     private static func load(iconName: String) -> NSImage {
         let icon = NSImage(named: NSImage.Name(iconName))

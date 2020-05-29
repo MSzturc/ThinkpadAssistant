@@ -18,6 +18,9 @@ final class ShortcutManager {
     static let micMuteShortcut = Shortcut(key: .f20, modifiers: [])
     static let micMuteShortcutActivate = Shortcut(key: .f20, modifiers: [.leftShift])
     static let micMuteShortcutDeactivate = Shortcut(key: .f20, modifiers: [.rightShift])
+    static let backlightOffShortcut = Shortcut(key: .f16, modifiers: [.leftShift])
+    static let backlightDimmedShortcut = Shortcut(key: .f16, modifiers: [.rightShift])
+    static let backlightBrightShortcut = Shortcut(key: .f19, modifiers: [.leftShift])
     
     static func register() {
         
@@ -76,21 +79,31 @@ final class ShortcutManager {
         })
         
         ShortcutMonitor.shared.register(mirroringMonitorShortcut, withAction: {
-            if(DisplayManager.getDisplayCount() > 1){
-                if(DisplayManager.isDisplayMirrored() == true){
-                    DispatchQueue.background(background: {
-                        DisplayManager.disableHardwareMirroring()
-                    }, completion:{
-                        HUD.showImage(Icons.extending, status: NSLocalizedString("Screen\nextending", comment: ""))
-                    })
-                } else {
-                    DispatchQueue.background(background: {
-                        DisplayManager.enableHardwareMirroring()
-                    }, completion:{
-                        HUD.showImage(Icons.mirroring, status: NSLocalizedString("Screen\nmirroring", comment: ""))
-                    })
-                }
+            if(DisplayManager.isDisplayMirrored() == true){
+                DispatchQueue.background(background: {
+                    DisplayManager.disableHardwareMirroring()
+                }, completion:{
+                    HUD.showImage(Icons.extending, status: NSLocalizedString("Screen\nextending", comment: ""))
+                })
+            } else {
+                DispatchQueue.background(background: {
+                    DisplayManager.enableHardwareMirroring()
+                }, completion:{
+                    HUD.showImage(Icons.mirroring, status: NSLocalizedString("Screen\nmirroring", comment: ""))
+                })
             }
+        })
+        
+        ShortcutMonitor.shared.register(backlightOffShortcut, withAction: {
+            HUD.showImage(Icons.backlightOff, status: NSLocalizedString("Backlight\noff", comment: ""))
+        })
+        
+        ShortcutMonitor.shared.register(backlightDimmedShortcut, withAction: {
+            HUD.showImage(Icons.backlightDimmed, status: NSLocalizedString("Backlight\ndimmed", comment: ""))
+        })
+        
+        ShortcutMonitor.shared.register(backlightBrightShortcut, withAction: {
+            HUD.showImage(Icons.backlightBright, status: NSLocalizedString("Backlight\nbright", comment: ""))
         })
         
     }
