@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "backlitdim_Normal-min.png",
+      "filename" : "backlitdim-min.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "backlitdim_Normal@2x-min.png",
+      "filename" : "backlitdim@2x-min.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "backlitdim_Normal@2x-min-1.png",
+      "filename" : "backlitdim@2x-min-1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
