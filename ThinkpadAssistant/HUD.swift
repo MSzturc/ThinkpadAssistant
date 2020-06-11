@@ -201,8 +201,12 @@ class RoundedEffectView: NSVisualEffectView {
         state = .active
     }
     
+    private func isDarkmode() -> Bool {
+        return NSApp.effectiveAppearance.name == NSAppearance.Name.darkAqua;
+    }
+    
     private var dynamicAppearance: NSAppearance? {
-        if (UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light" == "Dark") {
+        if isDarkmode() {
             return NSAppearance(named: .vibrantDark)
         } else {
             return NSAppearance(named: .vibrantLight)
@@ -210,7 +214,7 @@ class RoundedEffectView: NSVisualEffectView {
     }
     
     private var dynamicMaterial: Material {
-        if (UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light" == "Dark") {
+        if isDarkmode() {
             return .dark
         } else {
             return .light
