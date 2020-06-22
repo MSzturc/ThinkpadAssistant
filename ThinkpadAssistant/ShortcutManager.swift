@@ -12,7 +12,7 @@ final class ShortcutManager {
     
     static let mirroringMonitorShortcut = Shortcut(key: .f16, modifiers: [])
     static let disableWlanShortcut = Shortcut(key: .f17, modifiers: [])
-    static let disableBluetoothShortcut = Shortcut(key: .f17, modifiers: [.leftShift])
+    static let disableBluetoothShortcut = Shortcut(key: .f1, modifiers: [])
     static let systemPrefsShortcut = Shortcut(key: .f18, modifiers: [])
     static let launchpadShortcut = Shortcut(key: .f19, modifiers: [])
     static let micMuteShortcut = Shortcut(key: .f20, modifiers: [])
