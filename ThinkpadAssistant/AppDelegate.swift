@@ -30,9 +30,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         ShortcutManager.unregister()
     }
     
-    @IBAction func launchAtLoginPressed(_ sender: NSMenuItem) {
-        
-        if(sender.state == .off) {
+    @IBAction func launchAtLoginPressed(_ sender: NSMenuItem) {        
+        if sender.state == .off {
             sender.state = .on
             SMLoginItemSetEnabled(helperBundleName as CFString, true)
         } else {
