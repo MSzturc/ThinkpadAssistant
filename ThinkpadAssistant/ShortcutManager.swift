@@ -21,6 +21,8 @@ final class ShortcutManager {
     static let backlightOffShortcut = Shortcut(key: .f16, modifiers: [.leftShift])
     static let backlightDimmedShortcut = Shortcut(key: .f16, modifiers: [.rightShift])
     static let backlightBrightShortcut = Shortcut(key: .f19, modifiers: [.leftShift])
+    static let fnlockOnShortcut = Shortcut(key: .f18, modifiers: [.leftShift])
+    static let fnlockOffShortcut = Shortcut(key: .f18, modifiers: [.rightShift])
     
     static func register() {
         
@@ -106,6 +108,13 @@ final class ShortcutManager {
             HUD.showImage(Icons.backlightBright, status: NSLocalizedString("Backlight\nbright", comment: ""))
         })
         
+        ShortcutMonitor.shared.register(fnlockOnShortcut, withAction: {
+            HUD.showImage(Icons.fnlockOn, status: NSLocalizedString("Function\nKeys", comment: ""))
+        })
+        
+        ShortcutMonitor.shared.register(fnlockOffShortcut, withAction: {
+            HUD.showImage(Icons.fnlockOff, status: NSLocalizedString("Media\nKeys", comment: ""))
+        })
     }
     
     static func unregister() {
