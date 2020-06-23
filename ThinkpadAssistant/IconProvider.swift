@@ -23,6 +23,8 @@ final class Icons {
     static let backlightBright = load(iconName: "backlightBright")
     static let capslockOn = load(iconName: "capslockOn")
     static let capslockOff = load(iconName: "capslockOff")
+    static let fnlockOn = load(iconName: "fnlockon")
+    static let fnlockOff = load(iconName: "fnlockoff")
     
     private static func load(iconName: String) -> NSImage {
         let icon = NSImage(named: NSImage.Name(iconName))
