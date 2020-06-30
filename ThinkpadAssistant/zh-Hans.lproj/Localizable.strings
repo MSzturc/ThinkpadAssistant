@@ -1,8 +1,14 @@
 /* No comment provided by engineer. */
+"Capslock\ndisabled" = "关闭大写锁定";
+
+/* No comment provided by engineer. */
+"Capslock\nenabled" = "开启大写锁定";
+
+/* No comment provided by engineer. */
 "Media\nKeys" = "开启媒体键";
 
 /* No comment provided by engineer. */
-"Function\nKeys" = "开启功能键盘";
+"Function\nKeys" = "开启功能键";
 
 /* No comment provided by engineer. */
 "Backlight\nbright" = "键盘背光";
