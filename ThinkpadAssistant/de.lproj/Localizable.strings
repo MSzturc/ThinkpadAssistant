@@ -14,6 +14,18 @@
 "Bluetooth\nenabled" = "Bluetooth aktiviert";
 
 /* No comment provided by engineer. */
+"Capslock\ndisabled" = "Feststelltaste\ninaktiv";
+
+/* No comment provided by engineer. */
+"Capslock\nenabled" = "Feststelltaste\naktiv";
+
+/* No comment provided by engineer. */
+"Function\nKeys" = "Funktionstasten\naktiv";
+
+/* No comment provided by engineer. */
+"Media\nKeys" = "Medientasten\naktiv";
+
+/* No comment provided by engineer. */
 "Microphone\nmuted" = "Mikrofon stumm";
 
 /* No comment provided by engineer. */
