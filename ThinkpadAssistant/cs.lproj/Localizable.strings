@@ -32,4 +32,16 @@
 "Bluetooth\nenabled" = "Bluetooth\nzapnuto";
 
 /* No comment provided by engineer. */
+"Capslock\ndisabled" = "Caps Lock\nvypnutý";
+
+/* No comment provided by engineer. */
+"Capslock\nenabled" = "Caps Lock\nzapnutý";
+
+/* No comment provided by engineer. */
+"Function\nKeys" = "Funkce F1-F12\naktivní";
+
+/* No comment provided by engineer. */
+"Media\nKeys" = "Speciální funkce\naktivní";
+
+/* No comment provided by engineer. */
 "Version" = "Verze";
