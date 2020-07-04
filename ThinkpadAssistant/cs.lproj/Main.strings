@@ -14,6 +14,9 @@
 /* Class = "NSMenuItem"; title = "Quit"; ObjectID = "Q77-Nx-rEG"; */
 "Q77-Nx-rEG.title" = "Ukončit";
 
+/* Class = "NSMenuItem"; title = "Monitor Capslock"; ObjectID = "Nth-Jo-BIN"; */
+"Nth-Jo-BIN.title" = "Kontrola Caps Locku";
+
 /* Class = "NSTextFieldCell"; title = "Version 1.0.0"; ObjectID = "Yvs-Nm-uAg"; */
 "Yvs-Nm-uAg.title" = "Verze 1.0.0";
 
