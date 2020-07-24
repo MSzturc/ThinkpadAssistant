@@ -21,6 +21,9 @@ final class CapslockMonitor {
     }
 
     static func register() {
+        // get initial capslock state
+        lastState = getCapslockState()
+
         NSEvent.addGlobalMonitorForEvents(matching: .flagsChanged, handler: flagsChanged)
     }
 
