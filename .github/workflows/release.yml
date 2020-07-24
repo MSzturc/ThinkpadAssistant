@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: macOS-lastest
+    runs-on: macOS-10.15
 
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
