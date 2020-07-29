@@ -2,59 +2,60 @@
 
 DefinitionBlock("", "SSDT", 2, "OCLT", "x1input", 0)
 {
-    External(_SB.PCI0.LPCB.KBD, DeviceObj)
-    External(_SB.PCI0.LPCB.EC, DeviceObj)
-    External(_SB.PCI0.LPCB.EC.XQ6A, MethodObj)
-    External(_SB.PCI0.LPCB.EC.XQ15, MethodObj)
-    External(_SB.PCI0.LPCB.EC.XQ14, MethodObj)
-    External(_SB.PCI0.LPCB.EC.XQ16, MethodObj)
-    External(_SB.PCI0.LPCB.EC.XQ64, MethodObj)
-    External(_SB.PCI0.LPCB.EC.XQ66, MethodObj)
-    External(_SB.PCI0.LPCB.EC.XQ60, MethodObj)
-    External(_SB.PCI0.LPCB.EC.XQ61, MethodObj)
-    External(_SB.PCI0.LPCB.EC.XQ62, MethodObj)
-    External(_SB.PCI0.LPCB.EC.HKEY.MMTS, MethodObj)
-    External(_SB.PCI0.LPCB.EC.HKEY.MMTG, MethodObj)
+    External(\_SB.PCI0.LPCB.KBD, DeviceObj)
+    External(\_SB.PCI0.LPCB.EC, DeviceObj)
+    External (\_SB.PCI0.LPCB.EC.XQ14, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ15, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ16, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ1F, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ60, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ61, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ62, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ64, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ66, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ6A, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.XQ74, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.HKEY.MMTS, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.HKEY.MCLS, MethodObj)
+    External (\_SB.PCI0.LPCB.EC.HKEY.MHKQ, MethodObj)
 
     Scope (_SB.PCI0.LPCB.EC)
     {
-        Name (LED1, Zero)
-        Name (LED2, Zero)
+        Name (MICL, Zero) // Microphone Mute
+        Name (KEYL, Zero) // Keyboard Backlight
+	Name (FUNL, Zero) // FnLock
 
         // _Q6A - Microphone Mute
-        Method (_Q6A, 0, NotSerialized) // F4 - Microphone Mute = F20
+        Method (_Q6A, 0, Serialized) // F4 - Microphone Mute = F20
         {
-            If (_OSI ("Darwin"))
-          	{
-                // Toggle Mute Microphone LED
-                If ((LED1 == Zero))
-                {
+            If (!_OSI("Darwin")) {
+                XQ6A()
+                Return()    
+            }
+            
+            MICL = (MICL + 1) % 2
+            
+            Switch (MICL)
+            {
+                Case (One) {
                     // Right Shift + F20
                     Notify (\_SB.PCI0.LPCB.KBD, 0x0136)
                     Notify (\_SB.PCI0.LPCB.KBD, 0x036B)
                     Notify (\_SB.PCI0.LPCB.KBD, 0x01b6)
-
-                    // 0x02 = Enable LED
+                    
+                    // Enable LED
                     \_SB.PCI0.LPCB.EC.HKEY.MMTS (0x02)
-                    LED1 = One
                 }
-                Else
-                {
+                Case (Zero) {
                     // Left Shift + F20
                     Notify (\_SB.PCI0.LPCB.KBD, 0x012A)
                     Notify (\_SB.PCI0.LPCB.KBD, 0x036B)
                     Notify (\_SB.PCI0.LPCB.KBD, 0x01aa)
-
-                    // 0x00 = Disable LED
+                    
+                    // Disable LED
                     \_SB.PCI0.LPCB.EC.HKEY.MMTS (Zero)
-                    LED1 = Zero
                 }
-          	}
-          	Else
-          	{
-                // Call original _Q6A method.
-                \_SB.PCI0.LPCB.EC.XQ6A()
-          	}
+            }
         }
 
         Method (_Q15, 0, NotSerialized) // F5 - Brightness Down = F14
@@ -166,53 +167,77 @@ DefinitionBlock("", "SSDT", 2, "OCLT", "x1input", 0)
             }
         }
 
-        // _Q1F - (Fn+Space) Toggle Keyboard Backlight.
-        Method (_Q1F, 0, NotSerialized) // cycle keyboard backlight
+	// _Q74 - FnLock
+        Method (_Q74, 0, Serialized) // FnLock = Shift + F18
         {
-            If (_OSI ("Darwin"))
-            {
-                // Cycle keyboard backlight states
+            If (!_OSI("Darwin")) {
+                XQ74()
+                Return()
+            }
 
-                If ((LED2 == Zero))
-                {
-                    // Right Shift + F16.
+            FUNL = (FUNL + 1) % 2
+
+            Switch (FUNL)
+            {
+                Case (One) {
+                    // Right Shift + F18
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x012A)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x0369)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x01aa)
+
+                    // Enable LED
+                    \_SB.PCI0.LPCB.EC.HKEY.MHKQ (0x02)
+                }
+                Case (Zero) {
+                    // Left Shift + F18
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x0136)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x0369)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x01b6)
+
+                    // Disable LED
+                    \_SB.PCI0.LPCB.EC.HKEY.MHKQ (Zero)
+                }
+            }
+        }
+
+        // _Q1F - (Fn+Space) Toggle Keyboard Backlight.
+        Method (_Q1F, 0, Serialized) // cycle keyboard backlight
+        {
+            If (!_OSI("Darwin")) {
+                XQ1F()
+                Return()    
+            }
+            
+            KEYL = (KEYL + 1) % 3
+            
+            Switch (KEYL)
+            {
+                Case (Zero) {
+                    // Left Shift + F16
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x012a)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x0367)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x01aa)
+                    
+                    // Off
+                    \_SB.PCI0.LPCB.EC.HKEY.MCLS (Zero)
+                }
+                Case (One) {
+                    // Right Shift + F16
                     Notify (\_SB.PCI0.LPCB.KBD, 0x0136)
                     Notify (\_SB.PCI0.LPCB.KBD, 0x0367)
                     Notify (\_SB.PCI0.LPCB.KBD, 0x01b6)
-                    //  Off to dim
-                    \_SB.PCI0.LPCB.EC.HKEY.MLCS (One)
-                    LED2 = One
+                    
+                    // Dim
+                    \_SB.PCI0.LPCB.EC.HKEY.MCLS (One)
                 }
-                Else
-                {
-                    If ((LED2 == One))
-                    {
-                        // Left Shift + F19.
-                        Notify (\_SB.PCI0.LPCB.KBD, 0x012a)
-                        Notify (\_SB.PCI0.LPCB.KBD, 0x036a)
-                        Notify (\_SB.PCI0.LPCB.KBD, 0x01aa)
-                        //  dim to bright
-                        \_SB.PCI0.LPCB.EC.HKEY.MLCS (0x02)
-                        LED2 = 2
-                    }
-                    Else
-                    {
-                        If ((LED2 == 2))
-                        {
-                            // Left Shift + F16.
-                            Notify (\_SB.PCI0.LPCB.KBD, 0x012a)
-                            Notify (\_SB.PCI0.LPCB.KBD, 0x0367)
-                            Notify (\_SB.PCI0.LPCB.KBD, 0x01aa)
-                            // bright to off
-                            \_SB.PCI0.LPCB.EC.HKEY.MLCS (Zero)
-                            LED2 = Zero
-                        }
-                        Else
-                        {
-                            // Call original _Q6A method.
-                            \_SB.PCI0.LPCB.EC.XQ1F ()
-                        }
-                    }
+                Case (0x02) {
+                    // Left Shift + F19
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x012a)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x036a)
+                    Notify (\_SB.PCI0.LPCB.KBD, 0x01aa)
+                    
+                    // Bright
+                    \_SB.PCI0.LPCB.EC.HKEY.MCLS (0x02)
                 }
             }
         }
