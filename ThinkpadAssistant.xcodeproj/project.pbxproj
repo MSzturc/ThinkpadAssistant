@@ -25,6 +25,8 @@
 		C9B3F7932462E0540082AD67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B3F7912462E0540082AD67 /* InfoPlist.strings */; };
 		C9DFD0252451BAA2000103A2 /* IconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFD0242451BAA2000103A2 /* IconProvider.swift */; };
 		DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */; };
+		F34E410024B1BADF00A7983F /* Capslock.m in Sources */ = {isa = PBXBuildFile; fileRef = F34E40FF24B1BADF00A7983F /* Capslock.m */; };
+		F397902F24A2916D009C1F22 /* CapslockMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397902E24A2916D009C1F22 /* CapslockMonitor.swift */; };
 		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
 		FC56DEC21EE98AC7001ACE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */; };
 		FC56DEC51EE98AC7001ACE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC31EE98AC7001ACE3F /* Main.storyboard */; };
@@ -88,6 +90,8 @@
 		F31BF22D24718B3900F40D56 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F31BF22E24718B3900F40D56 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F31BF22F24718B3900F40D56 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F34E40FF24B1BADF00A7983F /* Capslock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capslock.m; sourceTree = "<group>"; };
+		F397902E24A2916D009C1F22 /* CapslockMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapslockMonitor.swift; sourceTree = "<group>"; };
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
 		FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkpadAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				C9B3F78A2462DC360082AD67 /* Localizable.strings */,
 				C93B8424244A077000ECFFBD /* ShortcutManager.swift */,
 				C947BB06247AFECB00E6AF14 /* BluetoothManager.swift */,
+				F34E40FF24B1BADF00A7983F /* Capslock.m */,
+				F397902E24A2916D009C1F22 /* CapslockMonitor.swift */,
 				C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */,
 				C93B8466244E20D500ECFFBD /* WifiManager.swift */,
 				C91E2344244E3780007A1962 /* DisplayManager.swift */,
@@ -385,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34E410024B1BADF00A7983F /* Capslock.m in Sources */,
 				C91E2345244E3780007A1962 /* DisplayManager.swift in Sources */,
 				C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */,
 				C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */,
@@ -394,6 +401,7 @@
 				C93E0A9124681B4800041485 /* ShortcutMonitor.swift in Sources */,
 				C93E0A9324681B9100041485 /* Shortcut.swift in Sources */,
 				C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */,
+				F397902F24A2916D009C1F22 /* CapslockMonitor.swift in Sources */,
 				C93E0A9724685A2300041485 /* Extension.Carbon.swift in Sources */,
 				C947BB07247AFECB00E6AF14 /* BluetoothManager.swift in Sources */,
 				C9DFD0252451BAA2000103A2 /* IconProvider.swift in Sources */,
@@ -602,7 +610,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14.6;
-				MARKETING_VERSION = 1.8.0;
+				MARKETING_VERSION = 1.9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.ThinkpadAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -631,7 +639,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14.6;
-				MARKETING_VERSION = 1.8.0;
+				MARKETING_VERSION = 1.9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.ThinkpadAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

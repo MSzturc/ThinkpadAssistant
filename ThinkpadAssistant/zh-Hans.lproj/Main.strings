@@ -13,6 +13,9 @@
 /* Class = "NSMenuItem"; title = "Launch on Login"; ObjectID = "Lcb-4h-zk2"; */
 "Lcb-4h-zk2.title" = "开机自启动";
 
+/* Class = "NSMenuItem"; title = "Monitor Capslock"; ObjectID = "Nth-Jo-BIN"; */
+"Nth-Jo-BIN.title" = "监测大写锁定键";
+
 /* Class = "NSMenuItem"; title = "Quit"; ObjectID = "Q77-Nx-rEG"; */
 "Q77-Nx-rEG.title" = "退出";
 

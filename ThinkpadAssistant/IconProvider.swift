@@ -21,6 +21,8 @@ final class Icons {
     static let backlightOff = load(iconName: "backlightOff")
     static let backlightDimmed = load(iconName: "backlightDimmed")
     static let backlightBright = load(iconName: "backlightBright")
+    static let capslockOn = load(iconName: "capslockOn")
+    static let capslockOff = load(iconName: "capslockOff")
     static let fnlockOn = load(iconName: "fnlockon")
     static let fnlockOff = load(iconName: "fnlockoff")
     

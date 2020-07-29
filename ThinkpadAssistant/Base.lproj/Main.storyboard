@@ -23,6 +23,12 @@
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="0kS-3Y-egi"/>
+                        <menuItem title="Monitor Capslock" id="Nth-Jo-BIN">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="monitorCapslockPressed:" target="Voe-Tx-rLC" id="PlA-Pc-S4R"/>
+                            </connections>
+                        </menuItem>
                         <menuItem title="Launch on Login" id="Lcb-4h-zk2">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
@@ -42,6 +48,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ThinkpadAssistant" customModuleProvider="target">
                     <connections>
                         <outlet property="launchAtLoginMenuItem" destination="Lcb-4h-zk2" id="UmP-X8-dov"/>
+                        <outlet property="monitorCapslocksMenuItem" destination="Nth-Jo-BIN" id="oEz-5M-Top"/>
                         <outlet property="statusBarMenu" destination="XrB-HN-vRU" id="O8s-cs-J3B"/>
                     </connections>
                 </customObject>

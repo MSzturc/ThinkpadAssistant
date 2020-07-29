@@ -17,20 +17,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var statusBarMenu: NSMenu!
     
+    @IBOutlet weak var monitorCapslocksMenuItem: NSMenuItem!
     @IBOutlet weak var launchAtLoginMenuItem: NSMenuItem!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupMenuBar()
         ShortcutManager.register()
+        CapslockMonitor.register()
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
         ShortcutManager.unregister()
     }
     
-    @IBAction func launchAtLoginPressed(_ sender: NSMenuItem) {
-        
-        if(sender.state == .off) {
+    @IBAction func launchAtLoginPressed(_ sender: NSMenuItem) {        
+        if sender.state == .off {
             sender.state = .on
             SMLoginItemSetEnabled(helperBundleName as CFString, true)
         } else {
@@ -39,6 +40,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func monitorCapslockPressed(_ sender: NSMenuItem) {
+        if(sender.state == .off) {
+            sender.state = .on
+            CapslockMonitor.start()
+        } else {
+            sender.state = .off
+            CapslockMonitor.stop()
+        }
+    }
+
     func setupMenuBar() {
         statusItem.button?.image = NSImage(named: "menuIcon")
         statusItem.button?.alternateImage = NSImage(named: "menuIcon-light")
@@ -53,6 +64,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         launchAtLoginMenuItem.state = foundHelper ? .on : .off
+
+        monitorCapslocksMenuItem.state = CapslockMonitor.isActive ? .on : .off
     }
     
     @IBAction func quitPressed(_ sender: Any) {
