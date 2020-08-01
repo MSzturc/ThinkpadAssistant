@@ -51,7 +51,7 @@ jobs:
         mkdir Assets
         cp -R ${XCBUILD_PATH}/*.dmg Assets
         
-    - name: Create release
+    - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
@@ -62,7 +62,7 @@ jobs:
         draft: false
         prerelease: false
         
-    - name: Upload release assets
+    - name: Upload Release Assets
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
