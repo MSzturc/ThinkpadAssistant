@@ -19,6 +19,14 @@ jobs:
         brew install graphicsmagick imagemagick
         npm install --global create-dmg
         pod install
+    
+    # Import Certificates for sign
+    - name: Import Certificates
+      id: import_certs
+      uses: apple-actions/import-codesign-certs@v1
+      with: 
+        p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
+        p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
         
     # Build Thinkpad Assistant
     - name: Build
@@ -28,8 +36,7 @@ jobs:
         -destination "platform=macOS"
         -configuration Release
         -derivedDataPath build
-        CODE_SIGN_IDENTITY=""
-        CODE_SIGNING_REQUIRED=NO
+        CODE_SIGN_IDENTITY=- | xcpretty
       
     # Uncomment when code signing is finished
     #- name: Export
