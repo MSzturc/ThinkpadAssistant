@@ -13,25 +13,44 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Build Release and Archive
-    - name: Archive
-      run: xcodebuild 
-        -workspace ThinkpadAssistant.xcworkspace 
-        -scheme ThinkpadAssistant 
+    # Download necessary software and install CocoaPods
+    - name: Prepare Env
+      run: |
+        brew install graphicsmagick imagemagick
+        npm install --global create-dmg
+        pod install
+        
+    # Build Thinkpad Assistant
+    - name: Build
+      run: xcodebuild
+        -workspace ThinkpadAssistant.xcworkspace
+        -scheme ThinkpadAssistant
         -destination "platform=macOS"
-        -archivePath target.xcarchive
-        -configuration Release clean archive 
+        -configuration Release
+        -derivedDataPath build
+        CODE_SIGN_IDENTITY=""
+        CODE_SIGNING_REQUIRED=NO
       
-    - name: Export
-      run: xcodebuild 
-        -exportArchive 
-        -exportOptionsPlist ThinkpadAssistant/Info.plist 
-        -archivePath target.xcarchive 
-        -exportPath .
-         
-    - name: Compress
-      run: zip -r ThinkpadAssistant.zip ThinkpadAssistant.app
-      
+    # Uncomment when code signing is finished
+    #- name: Export
+    #  run: xcodebuild
+    #    -exportArchive
+    #    -exportOptionsPlist ThinkpadAssistant/Info.plist
+    #    -archivePath target.xcarchive
+    #    -exportPath . 
+
+    # Create Apple Disk Image
+    - name: Create DMG
+      run: |
+        XCBUILD_PATH="build/Build/Products/Release"
+        #cp LICENSE $XCBUILD_PATH/license.txt
+        cd $XCBUILD_PATH
+        create-dmg ThinkpadAssistant.app || true
+        mv *.dmg ThinkpadAssistant.dmg
+        cd -
+        mkdir Assets
+        cp -R ${XCBUILD_PATH}/*.dmg Assets
+        
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -42,13 +61,14 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
-    - name: Upload Release Asset
+        
+    - name: Upload Release Assets
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./ThinkpadAssistant.zip
-        asset_name: ThinkpadAssistant-${GITHUB_REF##*/}.zip
-        asset_content_type: application/zip
+        upload_url: ${{ steps.create_release.outputs.upload_url }} 
+        asset_path: Assets/ThinkpadAssistant.dmg
+        asset_name: ThinkpadAssistant.dmg
+        asset_content_type: application/x-apple-diskimage
