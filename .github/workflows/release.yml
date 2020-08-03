@@ -16,6 +16,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       # Download necessary software  and install CocoaPods
       - name: Prepare Env
@@ -62,7 +64,7 @@ jobs:
       - name: Generate Release Notes
         run: |
           echo '### The latest changes are:' >> ReleaseNotes.md
-          git log $(git describe --tags --abbrev=0)..HEAD --oneline | sed '/^$/d' >> ReleaseNotes.md
+          git log --oneline $(git describe --tags --abbrev=0 HEAD^)..HEAD | sed '/^$/d' >> ReleaseNotes.md
 
       - name: Create Release
         id: create_release
