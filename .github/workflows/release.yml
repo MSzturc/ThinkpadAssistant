@@ -2,80 +2,87 @@ name: Release Thinkpad Assistant
 
 on:
   push:
-    tags: 
-      - 'v*'
+    tags:
+      - "v*"
+env:
+  MACOS_APP_ARTIFACT: "ThinkpadAssistant.app"
+  MACOS_DMG_ARTIFACT: "ThinkpadAssistant.dmg"
+  XCBUILD_PATH: "build/Build/Products/Release"
 
 jobs:
   build:
-    runs-on: macOS-10.15
+    runs-on: macos-10.15
 
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-    # Download necessary software and install CocoaPods
-    - name: Prepare Env
-      run: |
-        brew install graphicsmagick imagemagick
-        npm install --global create-dmg
-        pod install
-    
-    # Import Certificates for sign
-    - name: Import Certificates
-      id: import_certs
-      uses: apple-actions/import-codesign-certs@v1
-      with: 
-        p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
-        p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
-        
-    # Build Thinkpad Assistant
-    - name: Build
-      run: xcodebuild
-        -workspace ThinkpadAssistant.xcworkspace
-        -scheme ThinkpadAssistant
-        -destination "platform=macOS"
-        -configuration Release
-        -derivedDataPath build
-        CODE_SIGN_IDENTITY=- | xcpretty
-      
-    # Uncomment when code signing is finished
-    #- name: Export
-    #  run: xcodebuild
-    #    -exportArchive
-    #    -exportOptionsPlist ThinkpadAssistant/Info.plist
-    #    -archivePath target.xcarchive
-    #    -exportPath . 
+      # Download necessary software  and install CocoaPods
+      - name: Prepare Env
+        run: |
+          brew install graphicsmagick imagemagick
+          npm install --global create-dmg
 
-    # Create Apple Disk Image
-    - name: Create DMG
-      run: |
-        XCBUILD_PATH="build/Build/Products/Release"
-        #cp LICENSE $XCBUILD_PATH/license.txt
-        cd $XCBUILD_PATH
-        create-dmg ThinkpadAssistant.app || true
-        mv *.dmg ThinkpadAssistant.dmg
-        cd -
-        mkdir Assets
-        cp -R ${XCBUILD_PATH}/*.dmg Assets
-        
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
-        
-    - name: Upload Release Assets
-      id: upload-release-asset 
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} 
-        asset_path: Assets/ThinkpadAssistant.dmg
-        asset_name: ThinkpadAssistant.dmg
-        asset_content_type: application/x-apple-diskimage
+          pod install
+
+      # Import Certificates for sign
+      - name: Import Certificates
+        id: import_certs
+        uses: apple-actions/import-codesign-certs@v1
+        with:
+          p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
+          p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
+
+      # Build Thinkpad Assistant
+      - name: Build
+        run: xcodebuild
+          -workspace ThinkpadAssistant.xcworkspace
+          -scheme ThinkpadAssistant
+          -destination "platform=macOS"
+          -configuration Release
+          -derivedDataPath build
+          CODE_SIGN_IDENTITY=- | xcpretty
+
+      # Check if Thinkpad Assistant is properly signed
+      - name: Check .app signature
+        run: codesign --verify -vvvv --deep --strict "${XCBUILD_PATH}/${MACOS_APP_ARTIFACT}"
+
+      # Create Apple Disk Image
+      - name: Create DMG
+        run: |
+          #cp LICENSE ${XCBUILD_PATH}/license.txt
+          cd ${XCBUILD_PATH}
+          create-dmg ${MACOS_APP_ARTIFACT} || true
+          mv *.dmg ${MACOS_DMG_ARTIFACT}
+          cd -
+          mkdir Assets
+          cp -R ${XCBUILD_PATH}/*.dmg Assets
+
+      # Get changes since last tag
+      - name: Generate Release Notes
+        run: |
+          echo '### The latest changes are:' >> ReleaseNotes.md
+          git log $(git describe --tags --abbrev=0)..HEAD --oneline | sed '/^$/d' >> ReleaseNotes.md
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body_path: ReleaseNotes.md
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Assets
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: Assets/ThinkpadAssistant.dmg
+          asset_name: ThinkpadAssistant.dmg
+          asset_content_type: application/x-apple-diskimage
