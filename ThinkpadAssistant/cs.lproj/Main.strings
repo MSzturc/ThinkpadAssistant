@@ -22,3 +22,6 @@
 
 /* Class = "NSWindow"; title = "About Thinkpad Assistant"; ObjectID = "eOf-uU-tUq"; */
 "eOf-uU-tUq.title" = "O aplikaci Thinkpad Assistant";
+
+/* Class = "NSMenuItem"; title = "F13 Screenshot"; ObjectID = "2Te-0T-sQh"; */
+"2Te-0T-sQh.title" = "Snímek Obrazovky - F13";

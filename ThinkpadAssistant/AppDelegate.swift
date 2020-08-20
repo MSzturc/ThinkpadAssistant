@@ -16,7 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let helperBundleName = "de.mszturc.AutoLaunchHelper"
     
     @IBOutlet weak var statusBarMenu: NSMenu!
-    
+
+    @IBOutlet weak var screenshotMenuItem: NSMenuItem!
     @IBOutlet weak var monitorCapslocksMenuItem: NSMenuItem!
     @IBOutlet weak var launchAtLoginMenuItem: NSMenuItem!
     
@@ -30,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         ShortcutManager.unregister()
     }
     
-    @IBAction func launchAtLoginPressed(_ sender: NSMenuItem) {        
+    @IBAction func launchAtLoginPressed(_ sender: NSMenuItem) {
         if sender.state == .off {
             sender.state = .on
             SMLoginItemSetEnabled(helperBundleName as CFString, true)
@@ -49,6 +50,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             CapslockMonitor.stop()
         }
     }
+    
+    @IBAction func screenshotPressed(_ sender: NSMenuItem) {
+        if(sender.state == .off) {
+            sender.state = .on
+            ScreenshotManager.start()
+        } else {
+            sender.state = .off
+            ScreenshotManager.stop()
+        }
+    }
 
     func setupMenuBar() {
         statusItem.button?.image = NSImage(named: "menuIcon")
@@ -64,7 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         launchAtLoginMenuItem.state = foundHelper ? .on : .off
-
+        screenshotMenuItem.state = ScreenshotManager.isActive ? .on : .off
         monitorCapslocksMenuItem.state = CapslockMonitor.isActive ? .on : .off
     }
     

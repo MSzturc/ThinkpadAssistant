@@ -10,6 +10,7 @@ import Cocoa
 
 final class ShortcutManager {
     
+    static let screenshotShortcut = Shortcut(key: .f13, modifiers: [])
     static let mirroringMonitorShortcut = Shortcut(key: .f16, modifiers: [])
     static let disableWlanShortcut = Shortcut(key: .f17, modifiers: [])
     static let disableBluetoothShortcut = Shortcut(key: .f17, modifiers: [.leftShift])
@@ -95,7 +96,7 @@ final class ShortcutManager {
                 })
             }
         })
-        
+                
         ShortcutMonitor.shared.register(backlightOffShortcut, withAction: {
             HUD.showImage(Icons.backlightOff, status: NSLocalizedString("Backlight\noff", comment: ""))
         })
@@ -114,6 +115,11 @@ final class ShortcutManager {
         
         ShortcutMonitor.shared.register(fnlockOffShortcut, withAction: {
             HUD.showImage(Icons.fnlockOff, status: NSLocalizedString("Media\nKeys", comment: ""))
+        })
+        
+        ShortcutMonitor.shared.register(screenshotShortcut, withAction: {
+        //startApp(withBundleIdentifier: "com.apple.systempreferences")
+            ScreenshotManager.captureScreen()
         })
     }
     
