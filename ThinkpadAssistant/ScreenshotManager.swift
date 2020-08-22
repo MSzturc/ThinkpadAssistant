@@ -41,6 +41,8 @@ final class ScreenshotManager {
     // From https://gist.github.com/soffes/da6ea98be4f56bc7b8e75079a5224b37
     @available(macOS 10.15, *)
     private static func canRecordScreen() -> Bool {
+        // Trigger Security&Privacy Window
+        CGDisplayCreateImage(CGMainDisplayID())
         let runningApplication = NSRunningApplication.current
         let processIdentifier = runningApplication.processIdentifier
 
@@ -113,6 +115,7 @@ final class ScreenshotManager {
         if #available(macOS 10.15 , *) {
             if canRecordScreen() == false {
                 displayInformativeWindow()
+                return
             }
         }
         let displayId = CGMainDisplayID()
