@@ -26,6 +26,7 @@
 		C9DFD0252451BAA2000103A2 /* IconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFD0242451BAA2000103A2 /* IconProvider.swift */; };
 		DC56F590D93F6994C91F60C8 /* Pods_ThinkpadAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */; };
 		F34E410024B1BADF00A7983F /* Capslock.m in Sources */ = {isa = PBXBuildFile; fileRef = F34E40FF24B1BADF00A7983F /* Capslock.m */; };
+		F380472D24EEB5FA00D5E137 /* ScreenshotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380472C24EEB5FA00D5E137 /* ScreenshotManager.swift */; };
 		F397902F24A2916D009C1F22 /* CapslockMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397902E24A2916D009C1F22 /* CapslockMonitor.swift */; };
 		FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */; };
 		FC56DEC21EE98AC7001ACE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */; };
@@ -55,19 +56,19 @@
 		A7FFA5A32A931C74AFABA743 /* Pods-AutoLaunchHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLaunchHelper.release.xcconfig"; path = "Target Support Files/Pods-AutoLaunchHelper/Pods-AutoLaunchHelper.release.xcconfig"; sourceTree = "<group>"; };
 		AE92EEF7DF0DF77FC8C1D8CC /* Pods-ThinkpadAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.release.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		C2D3B813365BCE6A84908549 /* Pods_AutoLaunchHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoLaunchHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C91E2344244E3780007A1962 /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
-		C93B8424244A077000ECFFBD /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
-		C93B8457244DAA4500ECFFBD /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
-		C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteMicManager.swift; sourceTree = "<group>"; };
-		C93B8466244E20D500ECFFBD /* WifiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiManager.swift; sourceTree = "<group>"; };
-		C93E0A8C24681AE000041485 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		C93E0A9024681B4800041485 /* ShortcutMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutMonitor.swift; sourceTree = "<group>"; };
-		C93E0A9224681B9100041485 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
-		C93E0A9424684C1600041485 /* Hotkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotkey.swift; sourceTree = "<group>"; };
-		C93E0A9624685A2300041485 /* Extension.Carbon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.Carbon.swift; sourceTree = "<group>"; };
-		C9404794246D5B2F00C90C38 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		C947BB06247AFECB00E6AF14 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
-		C947BB08247B017700E6AF14 /* ThinkpadAssistant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThinkpadAssistant-Bridging-Header.h"; sourceTree = "<group>"; };
+		C91E2344244E3780007A1962 /* DisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DisplayManager.swift; sourceTree = "<group>"; };
+		C93B8424244A077000ECFFBD /* ShortcutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ShortcutManager.swift; sourceTree = "<group>"; };
+		C93B8457244DAA4500ECFFBD /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HUD.swift; sourceTree = "<group>"; };
+		C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MuteMicManager.swift; sourceTree = "<group>"; };
+		C93B8466244E20D500ECFFBD /* WifiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = WifiManager.swift; sourceTree = "<group>"; };
+		C93E0A8C24681AE000041485 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Key.swift; sourceTree = "<group>"; };
+		C93E0A9024681B4800041485 /* ShortcutMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ShortcutMonitor.swift; sourceTree = "<group>"; };
+		C93E0A9224681B9100041485 /* Shortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Shortcut.swift; sourceTree = "<group>"; };
+		C93E0A9424684C1600041485 /* Hotkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Hotkey.swift; sourceTree = "<group>"; };
+		C93E0A9624685A2300041485 /* Extension.Carbon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Extension.Carbon.swift; sourceTree = "<group>"; };
+		C9404794246D5B2F00C90C38 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AboutViewController.swift; sourceTree = "<group>"; };
+		C947BB06247AFECB00E6AF14 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		C947BB08247B017700E6AF14 /* ThinkpadAssistant-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "ThinkpadAssistant-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9B3F7892462DA460082AD67 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		C9B3F78B2462DC360082AD67 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9B3F78D2462DC360082AD67 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
@@ -78,7 +79,7 @@
 		C9B503762463269300673FFA /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C9B503772463269300673FFA /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C9B503782463269400673FFA /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		C9DFD0242451BAA2000103A2 /* IconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconProvider.swift; sourceTree = "<group>"; };
+		C9DFD0242451BAA2000103A2 /* IconProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IconProvider.swift; sourceTree = "<group>"; };
 		DD371F54F75D0F5C930CA66E /* Pods-ThinkpadAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.debug.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		F2567B2F2469343D007C3158 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		F2567B302469343D007C3158 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
@@ -90,16 +91,17 @@
 		F31BF22D24718B3900F40D56 /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F31BF22E24718B3900F40D56 /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F31BF22F24718B3900F40D56 /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F34E40FF24B1BADF00A7983F /* Capslock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capslock.m; sourceTree = "<group>"; };
-		F397902E24A2916D009C1F22 /* CapslockMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapslockMonitor.swift; sourceTree = "<group>"; };
+		F34E40FF24B1BADF00A7983F /* Capslock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Capslock.m; sourceTree = "<group>"; };
+		F380472C24EEB5FA00D5E137 /* ScreenshotManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ScreenshotManager.swift; sourceTree = "<group>"; };
+		F397902E24A2916D009C1F22 /* CapslockMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CapslockMonitor.swift; sourceTree = "<group>"; };
 		FC21613D1EE9C64E00E7DB46 /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
 		FC56DEBA1EE98AC7001ACE3F /* ThinkpadAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkpadAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC56DEBD1EE98AC7001ACE3F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC56DEC11EE98AC7001ACE3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC56DEC41EE98AC7001ACE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC56DEC61EE98AC7001ACE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC56DED01EE98B3A001ACE3F /* AutoLaunchHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLaunchHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC56DED21EE98B3A001ACE3F /* HelperAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAppDelegate.swift; sourceTree = "<group>"; };
+		FC56DED21EE98B3A001ACE3F /* HelperAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HelperAppDelegate.swift; sourceTree = "<group>"; };
 		FC56DED61EE98B3A001ACE3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC56DED91EE98B3A001ACE3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC56DEDB1EE98B3A001ACE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				C91E2344244E3780007A1962 /* DisplayManager.swift */,
 				C9DFD0242451BAA2000103A2 /* IconProvider.swift */,
 				C9404794246D5B2F00C90C38 /* AboutViewController.swift */,
+				F380472C24EEB5FA00D5E137 /* ScreenshotManager.swift */,
 			);
 			path = ThinkpadAssistant;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F34E410024B1BADF00A7983F /* Capslock.m in Sources */,
+				F380472D24EEB5FA00D5E137 /* ScreenshotManager.swift in Sources */,
 				C91E2345244E3780007A1962 /* DisplayManager.swift in Sources */,
 				C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */,
 				C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */,

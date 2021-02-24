@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,6 +30,12 @@
                                 <action selector="monitorCapslockPressed:" target="Voe-Tx-rLC" id="PlA-Pc-S4R"/>
                             </connections>
                         </menuItem>
+                        <menuItem title="F13 Screenshot" id="2Te-0T-sQh">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="screenshotPressed:" target="Voe-Tx-rLC" id="Nec-7f-rh9"/>
+                            </connections>
+                        </menuItem>
                         <menuItem title="Launch on Login" id="Lcb-4h-zk2">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
@@ -49,6 +56,7 @@
                     <connections>
                         <outlet property="launchAtLoginMenuItem" destination="Lcb-4h-zk2" id="UmP-X8-dov"/>
                         <outlet property="monitorCapslocksMenuItem" destination="Nth-Jo-BIN" id="oEz-5M-Top"/>
+                        <outlet property="screenshotMenuItem" destination="2Te-0T-sQh" id="5my-tr-fPv"/>
                         <outlet property="statusBarMenu" destination="XrB-HN-vRU" id="O8s-cs-J3B"/>
                     </connections>
                 </customObject>
@@ -118,6 +126,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="menuIcon" width="1024" height="1024"/>
+        <image name="menuIcon" width="64" height="64"/>
     </resources>
 </document>

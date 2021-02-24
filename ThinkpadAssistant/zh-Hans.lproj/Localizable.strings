@@ -46,4 +46,8 @@
 /* No comment provided by engineer. */
 "Wi-Fi\nenabled" = "打开 Wi-Fi";
 
+/* Screen capture information window - Heading */
+"Screen Capture Permission is Required" = "Screen Capture Permission is Required"; //FIXME
 
+/* Screen capture information window - Content */
+"Thinkpad Assistant uses Screen Capture for its screenshot functionality. \n\nWithout the required permissions, you'll only be able to see blank screens on macOS Catalina and later" = "Thinkpad Assistant uses Screen Capture for its screenshot functionality. \n\nWithout the required permissions, you'll only be able to see blank screens on macOS Catalina and later"; //FIXME

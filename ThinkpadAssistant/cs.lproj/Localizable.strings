@@ -45,3 +45,9 @@
 
 /* No comment provided by engineer. */
 "Version" = "Verze";
+
+/* Screen capture information window - Heading */
+"Screen Capture Permission is Required" = "Je nutné povolení záznamu obrazovky";
+
+/* Screen capture information window - Content */
+"Thinkpad Assistant uses Screen Capture for its screenshot functionality. \n\nWithout the required permissions, you'll only be able to see blank screens on macOS Catalina and later" = "Thinkpad Assistant potřebje povolení záznamu obrazovky, aby mohl pořizovat snímky obrazovky. \n\nBez potřebných oprávnění budou na macOS Catalina a novějších snímky obrazovky prázdné";
