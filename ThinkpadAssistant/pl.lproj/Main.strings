@@ -1,0 +1,24 @@
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Menu Główne";
+
+/* Class = "NSTextFieldCell"; title = "Copyright © 2020 Matthäus Szturc. All rights reserved."; ObjectID = "Dsc-bK-vCJ"; */
+"Dsc-bK-vCJ.title" = "Copyright © 2020 Matthäus Szturc. Wszelkie Prawa zastrzeżone.";
+
+/* Class = "NSMenuItem"; title = "About Thinkpad Assistant"; ObjectID = "Kql-K9-yoI"; */
+"Kql-K9-yoI.title" = "O Thinkpad Assistant";
+
+/* Class = "NSMenuItem"; title = "Launch on Login"; ObjectID = "Lcb-4h-zk2"; */
+"Lcb-4h-zk2.title" = "Uruchom przy starcie";
+
+/* Class = "NSMenuItem"; title = "Monitor Capslock"; ObjectID = "Nth-Jo-BIN"; */
+"Nth-Jo-BIN.title" = "Pokaż Caps-Lock";
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "Q77-Nx-rEG"; */
+"Q77-Nx-rEG.title" = "Wyjdź";
+
+/* Class = "NSTextFieldCell"; title = "Version 1.0.0"; ObjectID = "Yvs-Nm-uAg"; */
+"Yvs-Nm-uAg.title" = "Wersja 1.0.0";
+
+/* Class = "NSWindow"; title = "About Thinkpad Assistant"; ObjectID = "eOf-uU-tUq"; */
+"eOf-uU-tUq.title" = "O Thinkpad Assistant";

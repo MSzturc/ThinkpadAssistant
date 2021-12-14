@@ -1,0 +1,63 @@
+/* No comment provided by engineer. */
+"Backlight\nbright" = "Podświetlenie Jasne";
+
+/* No comment provided by engineer. */
+"Backlight\ndimmed" = "Podświetlenie Ciemne";
+
+/* No comment provided by engineer. */
+"Backlight\noff" = "Podświetlenie Wyłączone";
+
+/* No comment provided by engineer. */
+"Bluetooth\ndisabled" =
+    "Bluetooth
+Wyłączony";
+
+/* No comment provided by engineer. */
+"Bluetooth\nenabled" = "Bluetooth
+Włączony";
+
+/* No comment provided by engineer. */
+"Capslock\ndisabled" = "Caps-Lock
+Wyłączony";
+
+/* No comment provided by engineer. */
+"Capslock\nenabled" = "Caps-Lock
+Włączony";
+
+/* No comment provided by engineer. */
+"Function\nKeys" = "Klawisze
+Funkcyjne";
+
+/* No comment provided by engineer. */
+"Media\nKeys" = "Klawisze
+Multimedialne";
+
+/* No comment provided by engineer. */
+"Microphone\nmuted" =
+"Mikrofon
+Wyciszony";
+
+/* No comment provided by engineer. */
+"Microphone\nunmuted" =
+"Mikrofon
+Aktywny";
+
+/* No comment provided by engineer. */
+"Screen\nextending" = "Rozszerzanie Ekranu";
+
+/* No comment provided by engineer. */
+"Screen\nmirroring" = "Klonowanie Ekranu";
+
+/* No comment provided by engineer. */
+"Version" = "Wersja";
+
+/* No comment provided by engineer. */
+"Wi-Fi\ndisabled" =
+    "Wi-Fi
+Włączone";
+
+/* No comment provided by engineer. */
+"Wi-Fi\nenabled" =
+    "Wi-Fi
+Wyłączone";
+
