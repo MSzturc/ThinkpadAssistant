@@ -16,12 +16,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let helperBundleName = "de.mszturc.AutoLaunchHelper"
     
     @IBOutlet weak var statusBarMenu: NSMenu!
-    
     @IBOutlet weak var monitorCapslocksMenuItem: NSMenuItem!
     @IBOutlet weak var launchAtLoginMenuItem: NSMenuItem!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        setupMenuBar()
+        func dialog(question: String, text: String) -> Bool {
+            let alert: NSAlert = NSAlert()
+            alert.messageText = question
+            alert.informativeText = text
+            alert.alertStyle = NSAlert.Style.warning
+            alert.addButton(withTitle: NSLocalizedString("No", comment: ""))
+            alert.addButton(withTitle: NSLocalizedString("Yes", comment: ""))
+            let ask = alert.runModal()
+            if ask == NSApplication.ModalResponse.alertFirstButtonReturn {
+                setupMenuBar()
+                return true
+            }
+            else {
+                let notification = NSUserNotification()
+                notification.title = "ThinkPad Assistant"
+                notification.subtitle = NSLocalizedString("RiB", comment: "")
+                notification.soundName = NSUserNotificationDefaultSoundName
+                NSUserNotificationCenter.default.deliver(notification)
+                return false
+            }
+        }
+        _ = dialog(question: "ThinkPad Assistant", text: NSLocalizedString("TrayQuestion", comment: ""))
         ShortcutManager.register()
         CapslockMonitor.register()
     }
@@ -57,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.image?.size = NSSize(width: 18, height: 18)
         statusItem.button?.alternateImage?.size = NSSize(width: 18, height: 18)
         
-        statusItem.menu = statusBarMenu
+       statusItem.menu = statusBarMenu
         
         let foundHelper = NSWorkspace.shared.runningApplications.contains {
             $0.bundleIdentifier == helperBundleName

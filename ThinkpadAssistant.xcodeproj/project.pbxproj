@@ -51,6 +51,11 @@
 
 /* Begin PBXFileReference section */
 		1F4D64855DFDE6D7D5FD9F23 /* Pods-AutoLaunchHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLaunchHelper.debug.xcconfig"; path = "Target Support Files/Pods-AutoLaunchHelper/Pods-AutoLaunchHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		2E123FCC27691C4D00050176 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		2E123FCD27691C4D00050176 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		2E123FD027691D6400050176 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2E123FD127691F5400050176 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E123FD227691FCB00050176 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2D81A3D8A645E8C957C4863 /* Pods_ThinkpadAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThinkpadAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FFA5A32A931C74AFABA743 /* Pods-AutoLaunchHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLaunchHelper.release.xcconfig"; path = "Target Support Files/Pods-AutoLaunchHelper/Pods-AutoLaunchHelper.release.xcconfig"; sourceTree = "<group>"; };
 		AE92EEF7DF0DF77FC8C1D8CC /* Pods-ThinkpadAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThinkpadAssistant.release.xcconfig"; path = "Target Support Files/Pods-ThinkpadAssistant/Pods-ThinkpadAssistant.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,7 +275,6 @@
 				TargetAttributes = {
 					FC56DEB91EE98AC7001ACE3F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2Y3274NQLX;
 						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -281,7 +285,6 @@
 					};
 					FC56DECF1EE98B3A001ACE3F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2Y3274NQLX;
 						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -303,6 +306,7 @@
 				"zh-Hans",
 				it,
 				cs,
+				pl,
 			);
 			mainGroup = FC56DEB11EE98AC7001ACE3F;
 			productRefGroup = FC56DEBB1EE98AC7001ACE3F /* Products */;
@@ -428,6 +432,7 @@
 				C9B503772463269300673FFA /* zh-Hans */,
 				F2567B322469343D007C3158 /* it */,
 				F31BF22E24718B3900F40D56 /* cs */,
+				2E123FD027691D6400050176 /* pl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 				C9B503762463269300673FFA /* zh-Hans */,
 				F2567B312469343D007C3158 /* it */,
 				F31BF22D24718B3900F40D56 /* cs */,
+				2E123FD127691F5400050176 /* pl */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 				C9B503782463269400673FFA /* zh-Hans */,
 				F2567B332469343E007C3158 /* it */,
 				F31BF22F24718B3900F40D56 /* cs */,
+				2E123FD227691FCB00050176 /* pl */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -462,6 +469,7 @@
 				C9B503742463269300673FFA /* zh-Hans */,
 				F2567B2F2469343D007C3158 /* it */,
 				F31BF22B24718B3900F40D56 /* cs */,
+				2E123FCC27691C4D00050176 /* pl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -474,6 +482,7 @@
 				C9B503752463269300673FFA /* zh-Hans */,
 				F2567B302469343D007C3158 /* it */,
 				F31BF22C24718B3900F40D56 /* cs */,
+				2E123FCD27691C4D00050176 /* pl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -599,10 +608,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ThinkpadAssistant/ThinkpadAssistant.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2Y3274NQLX;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ThinkpadAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -628,10 +637,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ThinkpadAssistant/ThinkpadAssistant.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2Y3274NQLX;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ThinkpadAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -655,15 +664,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AutoLaunchHelper/AutoLaunchHelper.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2Y3274NQLX;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = AutoLaunchHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.AutoLaunchHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -679,15 +689,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AutoLaunchHelper/AutoLaunchHelper.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2Y3274NQLX;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = AutoLaunchHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = de.mszturc.AutoLaunchHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
