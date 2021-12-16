@@ -54,10 +54,21 @@ Aktywny";
 /* No comment provided by engineer. */
 "Wi-Fi\ndisabled" =
     "Wi-Fi
-Włączone";
+Wyłączone";
 
 /* No comment provided by engineer. */
 "Wi-Fi\nenabled" =
     "Wi-Fi
-Wyłączone";
+Włączone";
 
+/* No comment provided by engineer. */
+"RiB" = "Asystent działa w tle.";
+
+/* No comment provided by engineer. */
+"TrayQuestion" = "Czy chcesz ukryć ikonę asystenta na pasku?";
+
+/* No comment provided by engineer. */
+"No" = "Nie";
+
+/* No comment provided by engineer. */
+"Yes" = "Tak";
